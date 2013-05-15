@@ -1,6 +1,6 @@
 $('#igUpload1').igUpload({
             mode: 'multiple',
-            progressUrl: 'http://localhost/IGUploadStatusHandler.ashx',
+            progressUrl: 'http://igniteuisamples.dev.infragistics.local/13-1/IGUploadStatusHandler.ashx',
             maxUploadedFiles: 5,
             maxSimultaneousFilesUploads: 2,
             controlId: 'serverID1'
