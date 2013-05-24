@@ -19,7 +19,7 @@ $(function () {
                                 action: '_isSelectedAction'
                             },
                             imageButtonTooltip: {
-                                value: "Insert e-mail signature",
+                                value: "$$(btnInsertSignatureTooltip)",
                                 action: '_tooltipAction'
                             },
                             imageButtonIcon: {
@@ -35,6 +35,6 @@ $(function () {
 
         function appendSignature(ui) {
             var currentContent = $("#htmlEditor").igHtmlEditor("getContent", "html");
-            var signature = "<p>Best regards,<br/>John Doe<br/>Acme Corp<br/>555-1111</p>";
+            var signature = "<p>$$(signatureRegards)<br/>$$(signatureName)<br/>$$(signatureCompany)<br/>$$(signaturePhone)</p>";
             $("#htmlEditor").igHtmlEditor("setContent", currentContent + signature, "html");
         }

@@ -1,13 +1,13 @@
 $(function () {
             $("#grid2").igGrid({
                 columns: [
-                    { headerText: "Customer ID", key: "ID", dataType: "string", width: "150px" },
-                    { headerText: "Company Name", key: "CompanyName", dataType: "string", width: "130px" },
-                    { headerText: "Contact Name", key: "ContactName", dataType: "string", width: "100px" },
-                    { headerText: "Contact Title", key: "ContactTitle", dataType: "string", width: "160px" },
-                    { headerText: "Address", key: "Address", dataType: "string", width: "180px" },
-                    { headerText: "City", key: "City", dataType: "string", width: "110px" },
-                    { headerText: "Country", key: "Country", dataType: "string", width: "100px" }
+                    { headerText: "$$(Northwind_Customers_CustomerID)", key: "ID", dataType: "string", width: "150px" },
+                    { headerText: "$$(Northwind_Customers_CompanyName)", key: "CompanyName", dataType: "string", width: "130px" },
+                    { headerText: "$$(Northwind_Customers_ContactName)", key: "ContactName", dataType: "string", width: "100px" },
+                    { headerText: "$$(Northwind_Customers_ContactTitle)", key: "ContactTitle", dataType: "string", width: "160px" },
+                    { headerText: "$$(Northwind_Customers_Address)", key: "Address", dataType: "string", width: "180px" },
+                    { headerText: "$$(Northwind_Customers_City)", key: "City", dataType: "string", width: "110px" },
+                    { headerText: "$$(Northwind_Customers_Country)", key: "Country", dataType: "string", width: "100px" }
                 ],
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,

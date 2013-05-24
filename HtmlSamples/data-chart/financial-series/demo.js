@@ -19,7 +19,7 @@ $(function () {
                 series: [{
                     name: "series1",
                     dataSource: data1,
-                    title: "Price Series",
+                    title: "$$(Chart_lbl_priceSeries)",
                     type: "financial",
                     displayType: "candlestick",
                     xAxis: "xAxis",
@@ -38,7 +38,7 @@ $(function () {
                 }, {
                     name: "series2",
                     dataSource: data2,
-                    title: "Price Series",
+                    title: "$$(Chart_lbl_priceSeries)",
                     type: "financial",
                     displayType: "candlestick",
                     xAxis: "xAxis",
@@ -77,7 +77,7 @@ $(function () {
                 series: [{
                     name: "series1",
                     dataSource: data1,
-                    title: "Price Series",
+                    title: "$$(Chart_lbl_priceSeries)",
                     type: "financial",
                     displayType: "ohlc",
                     xAxis: "xAxis",
@@ -96,7 +96,7 @@ $(function () {
                 }, {
                     name: "series2",
                     dataSource: data2,
-                    title: "Price Series",
+                    title: "$$(Chart_lbl_priceSeries)",
                     type: "financial",
                     displayType: "ohlc",
                     xAxis: "xAxis",

@@ -73,7 +73,7 @@ $(function () {
 
             $("#standardText").on("click", function () {
                 var currentHtml = $("#htmlEditor").igHtmlEditor("getContent", "html");
-                $("#htmlEditor").igHtmlEditor("setContent", currentHtml + "This is standard text.", "html");
+                $("#htmlEditor").igHtmlEditor("setContent", currentHtml + "$$(text)", "html");
             });
 
             $("#emphasize").on("click", function () {

@@ -8,7 +8,7 @@ $(function () {
                 valueMemberPath: 'Change',
                 labelMemberPath: 'Date',
                 markerVisibility: "visible",
-                tooltipTemplate: "Low:${Low}<br>High:${High}"
+                tooltipTemplate: "$$(Low):${Low}<br>$$(High):${High}"
             });
 
         });

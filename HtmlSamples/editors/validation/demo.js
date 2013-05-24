@@ -34,7 +34,7 @@ function getShowAllErrorsOnSubmit() {
             $('#datePicker').igDatePicker({
                 width: 195,
                 dateInputFormat: 'dateTime',
-                nullText: 'Enter date',
+                nullText: '$$(enter_date)',
                 required: getRequired(),
                 validatorOptions: getValidationOptions()
             });
@@ -71,7 +71,7 @@ function getShowAllErrorsOnSubmit() {
                 minValue: new Date(1900, 0, 1),
                 maxValue: new Date(2200, 11, 31),
                 width: 195,
-                nullText: 'Enter date'
+                nullText: '$$(enter_date)'
             });
             $('#hideAnimationDuration').igNumericEditor({
                 width: 50,
@@ -132,7 +132,7 @@ function getShowAllErrorsOnSubmit() {
                 $('#dateEditor').igDateEditor('option', 'validatorOptions', validatorOptions);
             });
             $('#formSubmit').click(function () {
-                var message = "Form Submitting...";
+                var message = "$$(form_submitting)";
                 $("#submitMessage").stop(true, true);
                 $("#formSubmitMessage").html(message).stop(true, true).fadeIn(500).fadeOut(2000);
                 var form = $("#validationForm")[0];
@@ -150,7 +150,7 @@ function getShowAllErrorsOnSubmit() {
             });
 
             $('#validationForm').submit(function () {
-                var message = "Submit event fired";
+                var message = "$$(submit_fired)";
                 $("#formSubmitMessage").stop(true, true);
                 $("#submitMessage").html(message).stop(true, true).fadeIn(500).fadeOut(2000);
             });

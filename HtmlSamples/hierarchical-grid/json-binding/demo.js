@@ -2,17 +2,17 @@ $(function () {
 
             var data = [
                 {
-                    Name: "Food", 
+                    Name: "$$(Food)", 
                     Products: [
-                        { Name: "Bread", Quantity: 3 },
-                        { Name: "Pizza", Quantity: 4 }
+                        { Name: "$$(Bread)", Quantity: 3 },
+                        { Name: "$$(Pizza)", Quantity: 4 }
                     ]
                 },
                 {
-                    Name: "Beverages",
+                    Name: "$$(Beverages)",
                     Products: [
-                        { Name: "Milk", Quantity: 1 },
-                        { Name: "Fruit punch", Quantity: 4 }
+                        { Name: "$$(Milk)", Quantity: 1 },
+                        { Name: "$$(fruit_punch)", Quantity: 4 }
                     ]
                 }
             ];

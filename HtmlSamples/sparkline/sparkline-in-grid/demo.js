@@ -28,10 +28,10 @@ $(function () {
                     "<td>${ContactTitle}</td><td><div data-id='${ID}' class='order-sparkline'></div></td></tr>",
                 columns: [
                     { key: "ID", hidden: true },
-                    { key: "CompanyName", headerText: "Company" },
-                    { key: "ContactName", headerText: "Contact" },
-                    { key: "ContactTitle", headerText: "Contact Title" },
-                    { key: "Orders", headerText: "Order History" }
+                    { key: "CompanyName", headerText: "$$(Company_Name)" },
+                    { key: "ContactName", headerText: "$$(Contact_Name)" },
+                    { key: "ContactTitle", headerText: "$$(Contact_Title)" },
+                    { key: "Orders", headerText: "$$(Order_History)" }
                 ]
             });
 

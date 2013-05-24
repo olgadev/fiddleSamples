@@ -7,7 +7,7 @@ $(function () {
 
             /*----------------- Method & Option Examples -------------------------*/
 
-            // Add New Data Item button click handler
+            // $$(Add_Data) button click handler
             $("#btnAddData").click(function (e) {
 
                 var rnd = Math.floor(Math.random() * 2501);
@@ -15,10 +15,10 @@ $(function () {
 
                 $("#sparkline").igSparkline("addItem", item);
 
-                apiViewer.log("Item Added [Value: " + rnd + " ]");
+                apiViewer.log("$$(Item_Added) [$$(Value): " + rnd + " ]");
             });
 
-            // Remove First Data Item button click handler
+            // $$(Remove_Data) button click handler
             $("#btnRemoveData").click(function (e) {
 
                 var removedData = $("#sparkline").igSparkline("getDataItem", 0);                
@@ -27,7 +27,7 @@ $(function () {
 
                 if (removedData) {
                     removedData = removedData.ExtendedPrice;
-                    apiViewer.log("Item Removed [Value: " + removedData + " ]");
+                    apiViewer.log("$$(Item_Removed) [$$(Value): " + removedData + " ]");
                 }
             });
 

@@ -1,11 +1,11 @@
 var xmlDoc =
             '<CompanyBudget>' +
-                '<BudgetEntry Department="Development" Budget="100" />' +
-                '<BudgetEntry Department="IT" Budget="60" />' +
-                '<BudgetEntry Department="Sales" Budget="60" />' +
-                '<BudgetEntry Department="Marketing" Budget="50" />' +
-                '<BudgetEntry Department="Administration" Budget="30" />' +
-                '<BudgetEntry Department="Support" Budget="20" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_development)" Budget="100" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_it)" Budget="60" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_sales)" Budget="60" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_marketing)" Budget="50" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_administration)" Budget="30" />' +
+                '<BudgetEntry Department="$$(Chart_lbl_support)" Budget="20" />' +
             '</CompanyBudget>';
 
         $(function () {

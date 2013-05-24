@@ -1,13 +1,13 @@
 $(function () {
             $("#grid8").igGrid({
                 columns: [
-                    { headerText: "Customer ID", key: "ID", dataType: "string" },
-                    { headerText: "Company Name", key: "CompanyName", dataType: "string" },
-                    { headerText: "Contact Name", key: "ContactName", dataType: "string" },
-                    { headerText: "Contact Title", key: "ContactTitle", dataType: "string" },
-                    { headerText: "Address", key: "Address", dataType: "string" },
-                    { headerText: "City", key: "City", dataType: "string" },
-                    { headerText: "Country", key: "Country", dataType: "string" }
+                    { headerText: "$$(Northwind_Customers_CustomerID)", key: "ID", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_CompanyName)", key: "CompanyName", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_ContactName)", key: "ContactName", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_ContactTitle)", key: "ContactTitle", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_Address)", key: "Address", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_City)", key: "City", dataType: "string" },
+                    { headerText: "$$(Northwind_Customers_Country)", key: "Country", dataType: "string" }
                 ],
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,

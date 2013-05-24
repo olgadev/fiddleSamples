@@ -1,8 +1,8 @@
 $(function () {
 
-            data = [{ "Budget": 60, "Label": "Administration" }, { "Budget": 40, "Label": "Sales" },
-                { "Budget": 60, "Label": "IT" }, { "Budget": 40, "Label": "Marketing" },
-                { "Budget": 60, "Label": "Development" }, { "Budget": 20, "Label": "Support" }];
+            data = [{ "Budget": 60, "Label": "$$(Administration)" }, { "Budget": 40, "Label": "$$(Sales)" },
+                { "Budget": 60, "Label": "$$(IT)" }, { "Budget": 40, "Label": "$$(Marketing)" },
+                { "Budget": 60, "Label": "$$(Development)" }, { "Budget": 20, "Label": "$$(Support)" }];
 
             $('#chart1').igPieChart({
                 dataSource: data,

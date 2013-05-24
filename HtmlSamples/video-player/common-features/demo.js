@@ -10,51 +10,51 @@ $(function () {
                     fullscreen: false,
                     browserControls: false,
                     autoplay: false,
-                    title: 'Big Buck Bunny',
+                    title: '$$(bunny)',
                     muted: false,
                     autohide: false,
                     bookmarks: [
                         {
-                            title: 'River',
-                            description: 'River',
+                            title: '$$(River)',
+                            description: '$$(River)',
                             time: 13
                         },
                         {
-                            title: 'Big Buck Bunny Appears',
-                            description: 'Big Buck Bunny Appears',
+                            title: '$$(bunny_appears)',
+                            description: '$$(bunny_appears)',
                             time: 33
                         }
                     ]
                 });
 
                 if ($("#videoPlayer1").igVideoPlayer("supports_video"))
-                    $("#html5Video").html($("#html5Video").html() + '<span class="green">YES</span>');
+                    $("#html5Video").html($("#html5Video").html() + '<span class="green">$$(YES)</span>');
                 else
-                    $("#html5Video").html($("#html5Video").html() + '<span class="red">NO</span>');
+                    $("#html5Video").html($("#html5Video").html() + '<span class="red">$$(NO)</span>');
 
                 if ($("#videoPlayer1").igVideoPlayer("supports_h264_baseline_video"))
-                    $("#h264Video").html($("#h264Video").html() + '<span class="green">YES</span>');
+                    $("#h264Video").html($("#h264Video").html() + '<span class="green">$$(YES)</span>');
                 else
-                    $("#h264Video").html($("#h264Video").html() + '<span class="red">NO</span>');
+                    $("#h264Video").html($("#h264Video").html() + '<span class="red">$$(NO)</span>');
 
                 if ($("#videoPlayer1").igVideoPlayer("supports_ogg_theora_video"))
-                    $("#oggVideo").html($("#oggVideo").html() + '<span class="green">YES</span>');
+                    $("#oggVideo").html($("#oggVideo").html() + '<span class="green">$$(YES)</span>');
                 else
-                    $("#oggVideo").html($("#oggVideo").html() + '<span class="red">NO</span>');
+                    $("#oggVideo").html($("#oggVideo").html() + '<span class="red">$$(NO)</span>');
 
                 if ($("#videoPlayer1").igVideoPlayer("supports_webm_video"))
-                    $("#webMVideo").html($("#webMVideo").html() + '<span class="green">YES</span>');
+                    $("#webMVideo").html($("#webMVideo").html() + '<span class="green">$$(YES)</span>');
                 else
-                    $("#webMVideo").html($("#webMVideo").html() + '<span class="red">NO</span>');
+                    $("#webMVideo").html($("#webMVideo").html() + '<span class="red">$$(NO)</span>');
 
                 $("#videoPlayer1").igVideoPlayer().bind({
                     igvideoplayerplaying: function () {
                         playing = true;
-                        $('#btnPlay span').html("Pause");
+                        $('#btnPlay span').html("$$(Pause)");
                     },
                     igvideoplayerpaused: function () {
                         playing = false;
-                        $('#btnPlay span').html("Play");
+                        $('#btnPlay span').html("$$(Play)");
                     },
                     igvideoplayerprogress: function () {
                         $("#currentTime span").html($("#videoPlayer1").igVideoPlayer("currentTime"));

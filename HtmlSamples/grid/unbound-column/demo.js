@@ -11,7 +11,7 @@ $(function () {
             $("#getUnboundValues").click(function (e) {
                 var columnKey = $("#columnKey").val();
                 var unboundValues = $('#grid10').igGrid('getUnboundValues', columnKey);
-                message = "The unbound values of the column are: " + unboundValues;
+                message = "$$(unbound_col_values) " + unboundValues;
                 apiViewer.log(message);
             });
 
@@ -20,13 +20,13 @@ $(function () {
                 var columnKey = $("#columnKey").val();
                 var unboundColumn = $('#grid10').igGrid('getUnboundColumnByKey', columnKey);
 
-                var message = "The formula function of the column is: " + unboundColumn.formula;
+                var message = "$$(unbound_col_function) " + unboundColumn.formula;
                 apiViewer.log(message);
-                message = "The format of the column is: " + unboundColumn.format;
+                message = "$$(unbound_col_format) " + unboundColumn.format;
                 apiViewer.log(message);
-                message = "The template of the column is: " + unboundColumn.template;
+                message = "$$(unbound_col_template) " + unboundColumn.template;
                 apiViewer.log(message);
-                message = "The dataType of the column is: " + unboundColumn.dataType;
+                message = "$$(unbound_col_dataType) " + unboundColumn.dataType;
                 apiViewer.log(message);
             });
 
@@ -53,7 +53,7 @@ $(function () {
                 var cell = $('#grid10').igGrid("cellAt", ui.colIndex, ui.rowIndex);
 
                 if (ui.colKey == "Total") {
-                    apiViewer.log("The Total's cell text is " + $(cell).text());
+                    apiViewer.log("$$(unbound_col_Total) " + $(cell).text());
                 }
             });
 
@@ -105,17 +105,17 @@ $(function () {
                 dataSourceType: 'json',
                 responseDataKey: "results",
                 columns: [
-                    { headerText: "Product ID", key: "ProductID", dataType: "number" },
-                    { headerText: "Product Name", key: "ProductName", dataType: "string" },
-                    { headerText: "Units in Stock", key: "UnitsInStock", dataType: "number" },
-                    { headerText: "Unit Price", key: "UnitPrice", dataType: "number", format: "currency" },
+                    { headerText: "$$(json_productID)", key: "ProductID", dataType: "number" },
+                    { headerText: "$$(json_productName)", key: "ProductName", dataType: "string" },
+                    { headerText: "$$(json_units_in_stock)", key: "UnitsInStock", dataType: "number" },
+                    { headerText: "$$(json_unitPrice)", key: "UnitPrice", dataType: "number", format: "currency" },
                     {
-                        headerText: "Promotion Exp Date", key: "PromotionExpDate", dataType: "date", unbound: true,
+                        headerText: "$$(unbound_promotionExpDate)", key: "PromotionExpDate", dataType: "date", unbound: true,
                         unboundValues: [new Date('4/24/2012'), new Date('8/24/2012'), new Date('6/24/2012'), new Date('7/24/2012'), new Date('9/24/2012'), new Date('10/24/2012'), new Date('11/24/2012')]
                     },
-                    { headerText: "Is Promotion", key: "IsPromotion", dataType: "bool", unbound: true, format: "checkbox" },
+                    { headerText: "$$(unbound_isPromotion)", key: "IsPromotion", dataType: "bool", unbound: true, format: "checkbox" },
                     {
-                        headerText: "Total", key: "Total", dataType: "number", unbound: true,
+                        headerText: "$$(unbound_total)", key: "Total", dataType: "number", unbound: true,
                             formula: function CalculateTotal(data, grid) { return data["UnitPrice"] * data["UnitsInStock"];}, template: "Total: ${Total}"
                     }
                 ],

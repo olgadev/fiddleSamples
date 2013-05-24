@@ -12,7 +12,7 @@ $(function () {
 
             $("#grid9").on("iggridupdatingroweditdialogopened", function (evt, ui) {
                 var currDataRow = ui.dialogElement.data('tr');
-                var message = "rowEditDialogOpened event was fired with cell values: ";
+                var message = "$$(rowEditTemplate_eventFired) ";
                 for (var i = 0; i < currDataRow[0].cells.length; i++) {
                     message += " <br/>" + $(currDataRow[0].cells[i]).text();
                 }
@@ -29,19 +29,19 @@ $(function () {
                 columns: [{
                     // note: if primaryKey is set and data in primary column contains numbers,
                     // then the dataType: "number" is required, otherwise, dataSource may misbehave
-                    headerText: "Employee ID", key: "EmployeeID", width: "100px", dataType: "number"
+                    headerText: "$$(table_lbl_employeeID)", key: "EmployeeID", width: "100px", dataType: "number"
                 }, {
-                    headerText: "First Name", key: "FirstName", width: "130px"
+                    headerText: "$$(table_lbl_firstName)", key: "FirstName", width: "130px"
                 }, {
-                    headerText: "Last Name", key: "LastName", width: "100px"
+                    headerText: "$$(table_lbl_lastName)", key: "LastName", width: "100px"
                 }, {
-                    headerText: "Title", key: "Title", width: "80px"
+                    headerText: "$$(table_lbl_title)", key: "Title", width: "80px"
                 }, {
-                    headerText: "Birth Date", key: "BirthDate", width: "120px", dataType: "date"
+                    headerText: "$$(table_lbl_birthDate)", key: "BirthDate", width: "120px", dataType: "date"
                 }, {
-                    headerText: "Postal Code", key: "PostalCode", width: "150px", dataType: "number"
+                    headerText: "$$(table_lbl_postCode)", key: "PostalCode", width: "150px", dataType: "number"
                 }, {
-                    headerText: "Country", key: "Country", width: "150px", dataType: "string"
+                    headerText: "$$(table_lbl_country)", key: "Country", width: "150px", dataType: "string"
                 }
                 ],
                 dataSource: northwind,

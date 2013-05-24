@@ -13,8 +13,8 @@ $(function () {
             });
 
             // Initialize buttons for the Modal igDialog with igButton
-            $("#yesModalDialog").igButton({ labelText: "Yes", width: 80 });
-            $("#noModalDialog").igButton({ labelText: "No", width: 80 });
+            $("#yesModalDialog").igButton({ labelText: "$$(Yes)", width: 80 });
+            $("#noModalDialog").igButton({ labelText: "$$(No)", width: 80 });
 
             $("#yesModalDialog").on("click", function (e) {
                 if (helperText) {
@@ -61,7 +61,7 @@ $(function () {
                             return false;
                         }
 
-                        deletedNode = $("#tree").igTree("findNodesByText", "Deleted");
+                        deletedNode = $("#tree").igTree("findNodesByText", "$$(Deleted)");
                         if (deletedNode.length > 0) {
                             var nodePathArray = draggableNode.attr("data-path").split(".");
                             var deletedNodePathArray = deletedNode[0].path.split(".");
@@ -90,7 +90,7 @@ $(function () {
                         return false;
                     }
 
-                    deletedNode = $("#tree").igTree("findNodesByText", "Deleted");
+                    deletedNode = $("#tree").igTree("findNodesByText", "$$(Deleted)");
                     if (deletedNode.length > 0) {
                         var nodePathArray = node.path.split(".");
                         var DeletedNodePathArray = deletedNode[0].path.split(".");
@@ -121,7 +121,7 @@ $(function () {
                 },
                 drop: function (event, ui) {
                     helperText = ui.helper.text();
-                    $("#modalDialog").igDialog("option", "headerText", "Permanently delete - " + helperText);
+                    $("#modalDialog").igDialog("option", "headerText", "$$(permanently_delete) - " + helperText);
                     $("#modalDialog").igDialog("open");
                 }
             });

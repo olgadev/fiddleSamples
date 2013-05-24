@@ -2,26 +2,26 @@ $(function () {
 
             var data = [
                 {
-                    "ID": 1, "RegionName": "North America", "Countries":
+                    "ID": 1, "RegionName": "$$(Data_NorthAmerica)", "Countries":
                     [
-                        { "ID": 1, "CountryName": "United States" },
-                        { "ID": 2, "CountryName": "Canada" },
-                        { "ID": 3, "CountryName": "Mexico" }
+                        { "ID": 1, "CountryName": "$$(Data_UnitedStates)" },
+                        { "ID": 2, "CountryName": "$$(Data_Canada)" },
+                        { "ID": 3, "CountryName": "$$(Data_Mexico)" }
                     ]
                 },
                 {
-                    "ID": 2, "RegionName": "South America", "Countries":
+                    "ID": 2, "RegionName": "$$(Data_SouthAmerica)", "Countries":
                     [
-                        { "ID": 4, "CountryName": "Brazil" },
-                        { "ID": 5, "CountryName": "Uruguay" }
+                        { "ID": 4, "CountryName": "$$(Data_Brazil)" },
+                        { "ID": 5, "CountryName": "$$(Data_Uruguay)" }
                     ]
                 },
                 {
-                    "ID": 3, "RegionName": "Europe", "Countries":
+                    "ID": 3, "RegionName": "$$(Data_Europe)", "Countries":
                     [
-                        { "ID": 6, "CountryName": "United Kingdom" },
-                        { "ID": 7, "CountryName": "Germany" },
-                        { "ID": 8, "CountryName": "Bulgaria" }
+                        { "ID": 6, "CountryName": "$$(Data_UnitedKingdom)" },
+                        { "ID": 7, "CountryName": "$$(Data_Germany)" },
+                        { "ID": 8, "CountryName": "$$(Data_Bulgaria)" }
                     ]
                 }
             ];

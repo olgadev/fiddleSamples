@@ -1,7 +1,7 @@
 $(function () {
             var buttonLabel = $.ig.Upload.locale.labelUploadButton;
             if (Modernizr.input.multiple) {
-                buttonLabel = "Drag and Drop Files Here <br/> or Click to Select From a Dialog";
+                buttonLabel = "$$(Drag_And_Drop_Files)";
             }
             $("#igUpload1").igUpload({
                 mode: 'multiple',

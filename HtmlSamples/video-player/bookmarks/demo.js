@@ -12,26 +12,26 @@ $(function () {
                 autohide: false,
                 autoplay: false,
                 autohideDelay: 2000,
-                title: 'Infragistics Presentation',
+                title: '$$(ig_pres)',
                 bookmarks: [
 					{
-					    title: 'Design',
-					    description: 'Infragistics design presentation',
+					    title: '$$(Design)',
+					    description: '$$(ig_design_pres)',
 					    time: 14
 					},
 					{
-					    title: 'Develop',
-					    description: 'Infragistics develop presentation',
+					    title: '$$(Develop)',
+					    description: '$$(ig_develop_pres)',
 					    time: 46
 					},
 					{
-					    title: 'Experience',
-					    description: 'Infragistics experience presentation',
+					    title: '$$(Experience)',
+					    description: '$$(ig_experience_pres)',
 					    time: 74
 					},
 					{
-					    title: 'Final',
-					    description: 'Infragistics logo',
+					    title: '$$(Final)',
+					    description: '$$(ig_logo)',
 					    time: 100
 					}
                 ]

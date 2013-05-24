@@ -1,9 +1,9 @@
 $(function () {
 
             var data = [
-                      { "Name": "John Smith", "Age": 45 },
-                      { "Name": "Mary Johnson", "Age": 32 },
-                      { "Name": "Bob Ferguson", "Age": 27 }
+                      { "$$(Northwind_Employees_Name)": "John Smith", "$$(Northwind_Employees_Age)": 45 },
+                      { "$$(Northwind_Employees_Name)": "Mary Johnson", "$$(Northwind_Employees_Age)": 32 },
+                      { "$$(Northwind_Employees_Name)": "Bob Ferguson", "$$(Northwind_Employees_Age)": 27 }
                 ];
             
             // temporary use id="grid" instead of id="grid7": wait/undo if igGrid will fix its bug

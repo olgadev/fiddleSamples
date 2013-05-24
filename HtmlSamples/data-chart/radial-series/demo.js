@@ -1,11 +1,11 @@
 $(function () {
             var data = [
-                { "Label": "Administration", "Budget": 60, "Spending": 20 },
-                { "Label": "Sales", "Budget": 40, "Spending": 80 },
-                { "Label": "IT", "Budget": 60, "Spending": 20 },
-                { "Label": "Marketing", "Budget": 40, "Spending": 80 },
-                { "Label": "Development", "Budget": 60, "Spending": 20 },
-                { "Label": "Support", "Budget": 20, "Spending": 60 }
+                { "Label": "$$(Chart_lbl_administration)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Chart_lbl_sales)", "Budget": 40, "Spending": 80 },
+                { "Label": "$$(Chart_lbl_it)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Chart_lbl_marketing)", "Budget": 40, "Spending": 80 },
+                { "Label": "$$(Chart_lbl_development)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Chart_lbl_support)", "Budget": 20, "Spending": 60 }
             ];
 
             function createChart(selector, seriesType, data) {

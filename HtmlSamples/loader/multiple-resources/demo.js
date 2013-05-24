@@ -5,12 +5,12 @@ $.ig.loader({
         });
 
         $.ig.loader(function () {
-            var data1 = [{ "Label": "Administration", "Budget": 60, "Spending": 20 },
-                { "Label": "Sales", "Budget": 40, "Spending": 80 },
-                { "Label": "IT", "Budget": 60, "Spending": 20 },
-                { "Label": "Marketing", "Budget": 40, "Spending": 80 },
-                { "Label": "Development", "Budget": 60, "Spending": 20 },
-                { "Label": "Support", "Budget": 20, "Spending": 60 }];
+            var data1 = [{ "Label": "$$(Administration)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Sales)", "Budget": 40, "Spending": 80 },
+                { "Label": "$$(IT)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Marketing)", "Budget": 40, "Spending": 80 },
+                { "Label": "$$(Development)", "Budget": 60, "Spending": 20 },
+                { "Label": "$$(Support)", "Budget": 20, "Spending": 60 }];
 
             $("#chart1").igDataChart({
                 width: "500px",
@@ -33,7 +33,7 @@ $.ig.loader({
                 }],
                 series: [{
                     name: "series1",
-                    title: 'Budget',
+                    title: '$$(Budget)',
                     type: "radialLine",
                     angleAxis: "angleAxis",
                     valueAxis: "radiusAxis",
@@ -42,7 +42,7 @@ $.ig.loader({
                     markerType: "circle"
                 }, {
                     name: "series2",
-                    title: 'Spending',
+                    title: '$$(Spending)',
                     type: "radialLine",
                     angleAxis: "angleAxis",
                     valueAxis: "radiusAxis",
@@ -64,7 +64,7 @@ $.ig.loader({
                             name: "series2", remove: true
                         }, {
                             name: "series1",
-                            title: 'Budget',
+                            title: '$$(Budget)',
                             type: ui.items[0].value,
                             angleAxis: "angleAxis",
                             valueAxis: "radiusAxis",
@@ -73,7 +73,7 @@ $.ig.loader({
                             markerType: "circle"
                         }, {
                             name: "series2",
-                            title: 'Spending',
+                            title: '$$(Spending)',
                             type: ui.items[0].value,
                             angleAxis: "angleAxis",
                             valueAxis: "radiusAxis",

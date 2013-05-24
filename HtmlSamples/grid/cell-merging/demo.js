@@ -14,15 +14,15 @@ $(function () {
             /*----------------- Event Examples -------------------------*/
 
             $("#grid1").on("iggridcellmergingcellsmerged", function (evt, ui) {
-                var message = "Logging cellsMerged event";
+                var message = "$$(cell_merging_logging_caption)";
                 apiViewer.log(message);
-                message = "The index of the row the merged group starts in is: " + ui.rowIndex;
+                message = "$$(cell_merging_row_index)" + ui.rowIndex;
                 apiViewer.log(message);
-                message = "The key of the row the merged group starts in is: " + ui.rowKey;
+                message = "$$(cell_merging_row_key)" + ui.rowKey;
                 apiViewer.log(message);
-                message = "The cells value which is repeated and caused the merged group to be created is: " + ui.value;
+                message = "$$(cell_merging_cell_value)" + ui.value;
                 apiViewer.log(message);
-                message = "The total count of cells that were merged is: " + ui.count;
+                message = "$$(cell_merging_cell_count)" + ui.count;
                 apiViewer.log(message);
                 apiViewer.log('<br/>');
                 return;
@@ -44,14 +44,14 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                   { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "100px" },
-                   { key: "LastName", headerText: "First Name", dataType: "string", width: "100px" },
-                   { key: "FirstName", headerText: "Last Name", dataType: "string", width: "100px" },
-                   { key: "Title", headerText: "Title", dataType: "string", width: "150px" },
-                   { key: "Address", headerText: "Address", dataType: "string", width: "150px" },
-                   { key: "City", headerText: "City", dataType: "string", width: "100px" },
-                   { key: "Region", headerText: "Region", dataType: "string", width: "80px" },
-                   { key: "Country", headerText: "Country", dataType: "string", width: "100px" }
+                   { key: "EmployeeID", headerText: "$$(Northwind_Employees_EmployeeID)", dataType: "number", width: "100px" },
+                   { key: "LastName", headerText: "$$(Northwind_Employees_FirstName)", dataType: "string", width: "100px" },
+                   { key: "FirstName", headerText: "$$(Northwind_Employees_LastName)", dataType: "string", width: "100px" },
+                   { key: "Title", headerText: "$$(Northwind_Employees_Title)", dataType: "string", width: "150px" },
+                   { key: "Address", headerText: "$$(Northwind_Employees_Address)", dataType: "string", width: "150px" },
+                   { key: "City", headerText: "$$(Northwind_Employees_City)", dataType: "string", width: "100px" },
+                   { key: "Region", headerText: "$$(Northwind_Employees_Region)", dataType: "string", width: "80px" },
+                   { key: "Country", headerText: "$$(Northwind_Employees_Country)", dataType: "string", width: "100px" }
                 ],
                 features: [
                     {

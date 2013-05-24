@@ -1,10 +1,10 @@
 var data = [
-            { Budget: 30, Department: "Administration" },
-            { Budget: 50, Department: "Sales" },
-            { Budget: 60, Department: "IT" },
-            { Budget: 50, Department: "Marketing" },
-            { Budget: 100, Department: "Development" },
-            { Budget: 20, Department: "Support" }
+            { Budget: 30, Department: "$$(Chart_lbl_administration)" },
+            { Budget: 50, Department: "$$(Chart_lbl_sales)" },
+            { Budget: 60, Department: "$$(Chart_lbl_it)" },
+            { Budget: 50, Department: "$$(Chart_lbl_marketing)" },
+            { Budget: 100, Department: "$$(Chart_lbl_development)" },
+            { Budget: 20, Department: "$$(Chart_lbl_support)" }
         ];
 
         $(function () {

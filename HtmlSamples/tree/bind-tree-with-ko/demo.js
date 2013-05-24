@@ -38,7 +38,7 @@ var viewModel;
         $(function () {
             $(".message").ajaxError(function () {
                 $(this).css("color", "red");
-                $(this).text("Error getting product categories!");
+                $(this).text("$$(Getting_Data_Error)");
             });
             //  Get all the Categories and their related Products from the Northwind database
                $.getJSON("http://labs.infragistics.com/igniteui/api/categories?callback=?", function (data) {

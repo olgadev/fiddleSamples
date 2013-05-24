@@ -6,16 +6,16 @@ $(function () {
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 columns: [{
-                    headerText: "ID",
+                    headerText: "$$(id)",
                     key: "ID"
                 }, {
-                    headerText: "Company Name",
+                    headerText: "$$(companyName)",
                     key: "CompanyName"
                 }, {
-                    headerText: "Contact Name",
+                    headerText: "$$(contactName)",
                     key: "ContactName"
                 }, {
-                    headerText: "Contact Title",
+                    headerText: "$$(contactTitle)",
                     key: "ContactTitle"
                 }],
                 features: [{
@@ -27,13 +27,13 @@ $(function () {
                             height: "100%",
                             autoGenerateColumns: false,
                              columns: [{
-                                 headerText: "Order ID",
+                                 headerText: "$$(orderId)",
                                 key: "OrderID"
                             }, {
-                                headerText: "Customer ID",
+                                headerText: "$$(customerId)",
                                 key: "CustomerID"
                             }, {
-                                headerText: "Ship Name",
+                                headerText: "$$(shipName)",
                                 key: "ShipName"
                             }],
                             dataSource: nwCustomersWithOrders[args.row.index].Orders || []

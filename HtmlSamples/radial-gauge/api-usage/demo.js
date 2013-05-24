@@ -46,7 +46,7 @@ $(function () {
                 click: function (e) {
                     var needleValue = $("#radialgauge").igRadialGauge("option", "value");
                     if (prevValue == null || prevValue != needleValue) {
-                        apiViewer.log("Current Needle Value: " + needleValue);
+                        apiViewer.log("$$(RadialGauge_CurrentNeedleValue): " + needleValue);
                         prevValue = needleValue;
                     }
                 }

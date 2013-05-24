@@ -1,7 +1,7 @@
 $(function () {
 
             //Sample XML Data
-            var xmlDoc = '<OrgChart Name="All Employees">' +
+            var xmlDoc = '<OrgChart Name="$$(All_Employees)">' +
                 '<Employee Name="Gustavo Achong" Age="42" Email="gachong@adventureworks.com">' +
                     '<Employee Name="Kim Abercrombie" Age="33" Email="kabercrombie@adventureworks.com" />' +
                     '<Employee Name="Lawrence Tapley" Age="52" Email="ltapley@adventureworks.com" />' +

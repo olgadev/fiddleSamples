@@ -1,12 +1,12 @@
 $(function () {
 
             var data = [
-                { "DepartmentSize": 43, "Budget": 60, "Label": "Administration" },
-                { "DepartmentSize": 29, "Budget": 40, "Label": "Sales" },
-                { "DepartmentSize": 50, "Budget": 60, "Label": "IT" },
-                { "DepartmentSize": 22, "Budget": 40, "Label": "Marketing" },
-                { "DepartmentSize": 13, "Budget": 60, "Label": "Development" },
-                { "DepartmentSize": 34, "Budget": 20, "Label": "Support" }];
+                { "DepartmentSize": 43, "Budget": 60, "Label": "$$(Administration)" },
+                { "DepartmentSize": 29, "Budget": 40, "Label": "$$(Sales)" },
+                { "DepartmentSize": 50, "Budget": 60, "Label": "$$(IT)" },
+                { "DepartmentSize": 22, "Budget": 40, "Label": "$$(Marketing)" },
+                { "DepartmentSize": 13, "Budget": 60, "Label": "$$(Development)" },
+                { "DepartmentSize": 34, "Budget": 20, "Label": "$$(Support)" }];
 
 
             $("#chart").igDoughnutChart({

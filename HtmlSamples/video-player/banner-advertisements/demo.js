@@ -15,7 +15,7 @@ var alternate = true;
                 autohide: false,
                 autoplay: false,
                 autohideDelay: 2000,
-                title: 'Infragistics Presentation',
+                title: '$$(ig_pres)',
                 banners: [{
                     imageUrl: 'http://igniteuisamples.dev.infragistics.local/13-1/images/samples/video-player/banner.png',
                     link: 'http://quince.infragistics.com/',

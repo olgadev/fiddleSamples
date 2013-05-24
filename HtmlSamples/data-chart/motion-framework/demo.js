@@ -145,7 +145,7 @@ $(function () {
             ];
 
             genreList = ['Indie', 'Short film', 'Silent film', 'Animation', 'Documentary', 'Comedy', 'Horror', 'Adventure', 'Drama', 'Family', 'Crime fiction', 'Science fiction', 'Romance film', 'Thriller', 'Action', 'Musical', 'Action/Adventure', 'Sports'];
-            localizedGenres = ['Indie', 'Short Film', 'Silent Film', 'Animation', 'Documentary', 'Comedy', 'Horror', 'Adventure', 'Drama', 'Family', 'Crime Fiction', 'Science Fiction', 'Romance', 'Thriller', 'Action', 'Musical', 'Action Adventure', 'Sports'];
+            localizedGenres = ['$$(Chart_genre_Indie)', '$$(Chart_genre_ShortFilm)', '$$(Chart_genre_SilentFilm)', '$$(Chart_genre_Animation)', '$$(Chart_genre_Documentary)', '$$(Chart_genre_Comedy)', '$$(Chart_genre_Horror)', '$$(Chart_genre_Adventure)', '$$(Chart_genre_Drama)', '$$(Chart_genre_Family)', '$$(Chart_genre_CrimeFiction)', '$$(Chart_genre_ScienceFiction)', '$$(Chart_genre_Romance)', '$$(Chart_genre_Thriller)', '$$(Chart_genre_Action)', '$$(Chart_genre_Musical)', '$$(Chart_genre_ActionAdventure)', '$$(Chart_genre_Sports)'];
 
             getYear = function (year) {
                 var index = 0, yearData = null, ret = [];

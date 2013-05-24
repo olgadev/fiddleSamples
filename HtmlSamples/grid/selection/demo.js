@@ -41,11 +41,11 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "150px" },
-                    { headerText: "Name", key: "Name", dataType: "string", width: "150px" },
-                    { headerText: "Title", key: "Title", dataType: "string", width: "150px" },
-                    { headerText: "Image", key: "ImageUrl", dataType: "object", width: "110px", template: "<img width='100' height='85' src='${ImageUrl}'></img>" },
-                    { headerText: "Phone", key: "Phone", dataType: "string", width: "100px" }
+                    { headerText: "$$(Northwind_Employees_EmployeeID)", key: "ID", dataType: "number", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Name)", key: "Name", dataType: "string", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Title)", key: "Title", dataType: "string", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Image)", key: "ImageUrl", dataType: "object", width: "110px", template: "<img width='100' height='85' src='${ImageUrl}'></img>" },
+                    { headerText: "$$(Northwind_Employees_Phone)", key: "Phone", dataType: "string", width: "100px" }
                 ],
                 features: [
                     {
@@ -76,10 +76,10 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "150px" },
-                    { headerText: "Name", key: "Name", dataType: "string", width: "150px" },
-                    { headerText: "Title", key: "Title", dataType: "string", width: "150px" },
-                    { headerText: "Phone", key: "Phone", dataType: "string", width: "100px" }
+                    { headerText: "$$(Northwind_Employees_EmployeeID)", key: "ID", dataType: "number", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Name)", key: "Name", dataType: "string", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Title)", key: "Title", dataType: "string", width: "150px" },
+                    { headerText: "$$(Northwind_Employees_Phone)", key: "Phone", dataType: "string", width: "100px" }
                 ],
                 features: [
                     {

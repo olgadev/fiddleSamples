@@ -13,26 +13,26 @@ $(function () {
 
                 if (node.path != null) {
 
-                    if (node.data.Text === "Tech") {
-                        apiViewer.log("Tech node cannot be removed");
+                    if (node.data.Text === "$$(Tech)") {
+                        apiViewer.log("$$(tech_not_removed)");
                     }
                     else {
                         // Remove selected node using path
                         $("#tree").igTree("removeAt", node.path);
 
-                        apiViewer.log("Node Removed: " + node.data.Text);
+                        apiViewer.log("$$(node_removed) " + node.data.Text);
 
                         $("#tree").igTree("clearSelection");
                     }
                 } else {
-                    apiViewer.log("Please select a node and try again.");
+                    apiViewer.log("$$(select_try_again)");
                 }
             });
 
             // Select "Tech" Node button click handler
             $("#btnSelectNode").click(function (e) {
 
-                var nodes = $("#tree").igTree("findNodesByText", "Tech");
+                var nodes = $("#tree").igTree("findNodesByText", "$$(Tech)");
 
                 if (nodes.length > 0) {
                     $("#tree").igTree("select", nodes[0].element);
@@ -56,15 +56,15 @@ $(function () {
             /*----------------- Event Examples -------------------------*/
 
             $("#tree").on("igtreeselectionchanged", function (e, ui) {
-                apiViewer.log("igtreeselectionchanged: [ " + "Selection Changed: " + ui.newNodes[0].data.Text + "]");
+                apiViewer.log("igtreeselectionchanged: [ " + "$$(selection_changed) " + ui.newNodes[0].data.Text + "]");
             });
 
             $("#tree").on("igtreenodeclick", function (evt, ui) {
-                apiViewer.log("igtreenodeclick: [ " + "Node Clicked: " + ui.node.data.Text + "]");
+                apiViewer.log("igtreenodeclick: [ " + "$$(node_clicked) " + ui.node.data.Text + "]");
             });
 
             $("#tree").on("igtreedragstart", function (evt, ui) {
-                apiViewer.log("igtreedragstart: [ " + "Node Drag Start: " + ui.data.Text + "]");
+                apiViewer.log("igtreedragstart: [ " + "$$(drag_start) " + ui.data.Text + "]");
             });
 
             $("#tree").on("igtreedragstop", function (evt, ui) {

@@ -30,10 +30,10 @@
                 valueKey: "OrderID",
                 virtualization: true,
                 autoComplete: true,
-                headerTemplate: "<div class='dropDownHeaderFooter'>Available Products</div>",
-                footerTemplate: "<div class='dropDownHeaderFooter'>Product Count: {0} / {3}</div>",
+                headerTemplate: "<div class='dropDownHeaderFooter'>$$(available_products)</div>",
+                footerTemplate: "<div class='dropDownHeaderFooter'>$$(product_count): {0} / {3}</div>",
                 itemTemplate: "<div>${ProductName} (${Quantity})</div>",
-                nullText: "Please, select a product",
+                nullText: "$$(please_product)",
                 selectionChanged: function (evt, ui) {
                     //  Clear the selected item table and hide the div
                     $("#table").empty();

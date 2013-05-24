@@ -1,7 +1,7 @@
 $(function () {
 
             // Initialize the open button with igButton
-            $("#openDialog").igButton({ labelText: "Open Dialog" });
+            $("#openDialog").igButton({ labelText: "$$(open)" });
 
             // Initialize the igDialog
             $("#dialog").igDialog({

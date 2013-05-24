@@ -4,14 +4,14 @@ $(function () {
             var apiViewer = new $.ig.apiViewer();
 
             // Initialize buttons for create, destroy, open and close the igDialog
-            $("#createDialog").igButton({ labelText: "Create Dialog" });
-            $("#destroyDialog").igButton({ labelText: "Destroy Dialog", disabled: true });
-            $("#openDialog").igButton({ labelText: "Open Dialog", disabled: true });
-            $("#closeDialog").igButton({ labelText: "Close Dialog", disabled: true });
-            $("#maximizeDialog").igButton({ labelText: "Maximize Dialog", disabled: true });
-            $("#minimizeDialog").igButton({ labelText: "Minimize Dialog", disabled: true });
-            $("#pinDialog").igButton({ labelText: "Pin Dialog", disabled: true });
-            $("#unpinDialog").igButton({ labelText: "Unpin Dialog", disabled: true });
+            $("#createDialog").igButton({ labelText: "$$(create)" });
+            $("#destroyDialog").igButton({ labelText: "$$(destroy)", disabled: true });
+            $("#openDialog").igButton({ labelText: "$$(open)", disabled: true });
+            $("#closeDialog").igButton({ labelText: "$$(close)", disabled: true });
+            $("#maximizeDialog").igButton({ labelText: "$$(maximize)", disabled: true });
+            $("#minimizeDialog").igButton({ labelText: "$$(minimize)", disabled: true });
+            $("#pinDialog").igButton({ labelText: "$$(pin)", disabled: true });
+            $("#unpinDialog").igButton({ labelText: "$$(unpin)", disabled: true });
 
             /*----------------- Method & Option Examples -------------------------*/
 
@@ -61,12 +61,12 @@ $(function () {
                                 $("#maximizeDialog").igButton({ disabled: false });
                             }
                         },
-                        closeButtonTitle: "Close Dialog Window",
-                        minimizeButtonTitle: "Minimize Dialog Window",
-                        maximizeButtonTitle: "Maximize Dialog Window",
-                        pinButtonTitle: "Pin Dialog Window",
-                        unpinButtonTitle: "Unpin Dialog Window",
-                        restoreButtonTitle: "Restore Dialog Window",
+                        closeButtonTitle: "$$(closeButtonTitle)",
+                        minimizeButtonTitle: "$$(minimizeButtonTitle)",
+                        maximizeButtonTitle: "$$(maximizeButtonTitle)",
+                        pinButtonTitle: "$$(pinButtonTitle)",
+                        unpinButtonTitle: "$$(unpinButtonTitle)",
+                        restoreButtonTitle: "$$(restoreButtonTitle)",
                         showMinimizeButton: true,
                         showMaximizeButton: true,
                         showPinButton: true,
@@ -76,9 +76,9 @@ $(function () {
                         width: 500,
                         minWidth: 300,
                         maxWidth: 600,
-                        headerText: "This is my header text.",
+                        headerText: "$$(headerText)",
                         showFooter: true,
-                        footerText: "This is my footer text.",
+                        footerText: "$$(footerText)",
                         openAnimation: "fade",
                         closeAnimation: "fade"
                     });
@@ -251,12 +251,12 @@ $(function () {
                                 $("#maximizeDialog").igButton({ disabled: false });
                             }
                         },
-                        closeButtonTitle: "Close Dialog Window",
-                        minimizeButtonTitle: "Minimize Dialog Window",
-                        maximizeButtonTitle: "Maximize Dialog Window",
-                        pinButtonTitle: "Pin Dialog Window",
-                        unpinButtonTitle: "Unpin Dialog Window",
-                        restoreButtonTitle: "Restore Dialog Window",
+                        closeButtonTitle: "$$(closeButtonTitle)",
+                        minimizeButtonTitle: "$$(minimizeButtonTitle)",
+                        maximizeButtonTitle: "$$(maximizeButtonTitle)",
+                        pinButtonTitle: "$$(pinButtonTitle)",
+                        unpinButtonTitle: "$$(unpinButtonTitle)",
+                        restoreButtonTitle: "$$(restoreButtonTitle)",
                         showMinimizeButton: true,
                         showMaximizeButton: true,
                         showPinButton: true,
@@ -266,9 +266,9 @@ $(function () {
                         width: 500,
                         minWidth: 300,
                         maxWidth: 600,
-                        headerText: "This is my header text.",
+                        headerText: "$$(headerText)",
                         showFooter: true,
-                        footerText: "This is my footer text.",
+                        footerText: "$$(footerText)",
                         openAnimation: "fade",
                         closeAnimation: "fade",
                         position: getPosition()

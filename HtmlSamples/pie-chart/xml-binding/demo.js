@@ -2,11 +2,11 @@ $(function () {
                         
             //Sample XML Data
             var xmlDoc = '<Countries>' +
-                '<Country Name="China" Population="1333" />' +
-                '<Country Name="India" Population="1140" />' +
-                '<Country Name="United States" Population="304" />' +
-                '<Country Name="Indonesia" Population="228" />' +
-                '<Country Name="Brazil" Population="192" />' +
+                '<Country Name="$$(China)" Population="1333" />' +
+                '<Country Name="$$(India)" Population="1140" />' +
+                '<Country Name="$$(UnitedStates)" Population="304" />' +
+                '<Country Name="$$(Indonesia)" Population="228" />' +
+                '<Country Name="$$(Brazil)" Population="192" />' +
             '</Countries>';
 
             //Binding to XML requires a schema to define data fields

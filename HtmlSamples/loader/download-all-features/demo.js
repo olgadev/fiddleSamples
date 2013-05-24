@@ -49,10 +49,10 @@ $.ig.loader({
                 autoGenerateColumns: false,
                 primaryKey: "EmployeeID",
                 columns: [
-                    { key: "EmployeeID", headerText: "ID", dataType: "number", width: "100px" },
-                    { key: "LastName", headerText: "Last Name", dataType: "string", width: "150px" },
-                    { key: "FirstName", headerText: "First Name", dataType: "string", width: "150px" },
-                    { key: "HomePhone", headerText: "Home Phone", dataType: "string", width: "150px" }
+                    { key: "EmployeeID", headerText: "$$(ID)", dataType: "number", width: "100px" },
+                    { key: "LastName", headerText: "$$(last_name)", dataType: "string", width: "150px" },
+                    { key: "FirstName", headerText: "$$(first_name)", dataType: "string", width: "150px" },
+                    { key: "HomePhone", headerText: "$$(home_phone)", dataType: "string", width: "150px" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
@@ -63,13 +63,13 @@ $.ig.loader({
                         autoGenerateColumns: false,
                         primaryKey: "OrderID",
                         columns: [
-                            { key: "OrderID", headerText: "ID", dataType: "number", width: "50px" },
-                            { key: "CustomerID", headerText: "Customer ID", dataType: "string", width: "60px" },
-                            { key: "Freight", headerText: "Freight", dataType: "string", width: "70px" },
-                            { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "100px" },
-                            { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "90px" },
-                            { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "90px" },
-                            { key: "ShipCountry", headerText: "Ship Country", dataType: "string", width: "80px" }
+                            { key: "OrderID", headerText: "$$(ID)", dataType: "number", width: "50px" },
+                            { key: "CustomerID", headerText: "$$(customer_id)", dataType: "string", width: "60px" },
+                            { key: "Freight", headerText: "$$(Freight)", dataType: "string", width: "70px" },
+                            { key: "ShipName", headerText: "$$(ship_name)", dataType: "string", width: "100px" },
+                            { key: "ShipAddress", headerText: "$$(ship_address)", dataType: "string", width: "90px" },
+                            { key: "ShipCity", headerText: "$$(ship_city)", dataType: "string", width: "90px" },
+                            { key: "ShipCountry", headerText: "$$(ship_country)", dataType: "string", width: "80px" }
                         ],
                         features: [
                             {

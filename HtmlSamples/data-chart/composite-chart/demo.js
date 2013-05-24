@@ -33,7 +33,7 @@ var data = [
                 series: [{
                     type: "column",
                     name: "Coal",
-                    title: "Coal",
+                    title: "$$(Chart_Composite_Coal_DS)",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "Coal",
@@ -43,7 +43,7 @@ var data = [
                 }, {
                     type: "column",
                     name: "Oil",
-                    title: "Oil",
+                    title: "$$(Chart_Composite_Oil_DS)",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "Oil",
@@ -53,7 +53,7 @@ var data = [
                 }, {
                     type: "column",
                     name: "Nuclear",
-                    title: "Nuclear",
+                    title: "$$(Chart_Composite_Nuclear_DS)",
                     xAxis: "xAxis",
                     yAxis: "prodPower",
                     valueMemberPath: "Nuclear",
@@ -63,7 +63,7 @@ var data = [
                 }, {
                     type: "line",
                     name: "Total",
-                    title: "Total Energy",
+                    title: "$$(Chart_Composite_Total_DS)",
                     xAxis: "xAxis",
                     yAxis: "totalPower",
                     valueMemberPath: "Total",

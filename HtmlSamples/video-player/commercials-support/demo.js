@@ -13,7 +13,7 @@ $(function () {
                 autohide: false,
                 autoplay: false,
                 autohideDelay: 2000,
-                title: 'Infragistics Presentation',
+                title: '$$(ig_pres)',
                 commercials: {
                     linkedCommercials: [
 					{
@@ -21,7 +21,7 @@ $(function () {
 									"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_1.webmvp8.webm",
 									"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_1.theora.ogv"],
 					    startTime: 20,
-					    title: 'Quince<br/>Presentation<br/>Part 1',
+					    title: 'Quince<br/>$$(pres)<br/>$$(p1)',
 					    link: 'http://quince.infragistics.com/'
 					},
 					{
@@ -29,7 +29,7 @@ $(function () {
 									"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_Part3_1.webmvp8.webm",
 									"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_Part3_1.theora.ogv"],
 					    startTime: 100,
-					    title: 'Quince<br/>Presentation<br/>Part 2',
+					    title: 'Quince<br/>$$(pres)<br/>$$(p2)',
 					    link: 'http://quince.infragistics.com/'
 					}],
                     adMessage: {

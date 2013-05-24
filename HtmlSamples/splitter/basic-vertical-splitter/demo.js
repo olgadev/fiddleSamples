@@ -16,6 +16,6 @@ $(function () {
             if (node.data.Description) {
                 $("#splitter").igSplitter("secondPanel").html($("<p></p>").text(node.data.Description));
             } else {
-                $("#splitter").igSplitter("secondPanel").html($("<p></p>").text("No information found."));
+                $("#splitter").igSplitter("secondPanel").html($("<p></p>").text("$$(notFound)"));
             }
         });

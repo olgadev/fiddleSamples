@@ -13,15 +13,15 @@ $(function () {
             /*----------------- Event Examples -------------------------*/
 
             $(document).on("iggridcellmergingcellsmerged", "#grid1", function (evt, ui) {
-                var message = "Logging cellsMerged event";
+                var message = "$$(CellMerging_Logging_Caption)";
                 apiViewer.log(message);
-                message = "The index of the row the merged group starts in is: " + ui.rowIndex;
+                message = "$$(CellMerging_Logging_RowIndex)" + ui.rowIndex;
                 apiViewer.log(message);
-                message = "The key of the row the merged group starts in is: " + ui.rowKey;
+                message = "$$(CellMerging_Logging_RowKey)" + ui.rowKey;
                 apiViewer.log(message);
-                message = "The cells value which is repeated and caused the merged group to be created is: " + ui.value;
+                message = "$$(CellMerging_Logging_CellValue)" + ui.value;
                 apiViewer.log(message);
-                message = "The total count of cells that were merged is: " + ui.count;
+                message = "$$(CellMerging_Logging_CellCount)" + ui.count;
                 apiViewer.log(message);
                 apiViewer.log('<br/>');
                 return;
@@ -45,14 +45,14 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                   { key: "EmployeeID", headerText: "Employee ID", dataType: "number", width: "100px" },
-                   { key: "LastName", headerText: "First Name", dataType: "string", width: "100px" },
-                   { key: "FirstName", headerText: "Last Name", dataType: "string", width: "100px" },
-                   { key: "Title", headerText: "Title", dataType: "string", width: "150px" },
-                   { key: "Address", headerText: "Address", dataType: "string", width: "150px" },
-                   { key: "City", headerText: "City", dataType: "string", width: "100px" },
-                   { key: "Region", headerText: "Region", dataType: "string", width: "80px" },
-                   { key: "Country", headerText: "Country", dataType: "string", width: "100px" }
+                   { key: "EmployeeID", headerText: "$$(Northwind_Employees_EmployeeID)", dataType: "number", width: "100px" },
+                   { key: "LastName", headerText: "$$(Northwind_Employees_FirstName)", dataType: "string", width: "100px" },
+                   { key: "FirstName", headerText: "$$(Northwind_Employees_LastName)", dataType: "string", width: "100px" },
+                   { key: "Title", headerText: "$$(Northwind_Employees_Title)", dataType: "string", width: "150px" },
+                   { key: "Address", headerText: "$$(Northwind_Employees_Address)", dataType: "string", width: "150px" },
+                   { key: "City", headerText: "$$(Northwind_Employees_City)", dataType: "string", width: "100px" },
+                   { key: "Region", headerText: "$$(Northwind_Employees_Region)", dataType: "string", width: "80px" },
+                   { key: "Country", headerText: "$$(Northwind_Employees_Country)", dataType: "string", width: "100px" }
                 ],
                 features: [
                     {
@@ -77,12 +77,12 @@ $(function () {
                         autoGenerateColumns: false,
                         primaryKey: "OrderID",
                         columns: [
-                            { key: "OrderID", headerText: "Order ID", dataType: "number", width: "100px" },
-                            { key: "Freight", headerText: "Freight", dataType: "string", width: "100px" },
-                            { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "200px" },
-                            { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "200px" },
-                            { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "100px" },
-                            { key: "ShipCountry", headerText: "Ship Country", dataType: "string", width: "100px" }
+                            { key: "OrderID", headerText: "$$(Northwind_Orders_OrderID)", dataType: "number", width: "100px" },
+                            { key: "Freight", headerText: "$$(Northwind_Orders_Freight)", dataType: "string", width: "100px" },
+                            { key: "ShipName", headerText: "$$(Northwind_Orders_ShipName)", dataType: "string", width: "200px" },
+                            { key: "ShipAddress", headerText: "$$(Northwind_Orders_ShipAddress)", dataType: "string", width: "200px" },
+                            { key: "ShipCity", headerText: "$$(Northwind_Orders_ShipCity)", dataType: "string", width: "100px" },
+                            { key: "ShipCountry", headerText: "$$(Northwind_Orders_ShipCountry)", dataType: "string", width: "100px" }
                         ],
                         features: [
                             {

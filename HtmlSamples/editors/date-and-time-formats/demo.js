@@ -21,7 +21,7 @@ $(function () {
                 width: 200,
                 minValue: new Date(),
                 maxValue: new Date(),
-                nullText: "Enter Today's Date",
+                nullText: "$$(enter_today)",
                 hideMaskOnFocus: true
             });
 

@@ -45,9 +45,9 @@ $(function () {
             $('#GetSelectedRows').on({
                 click: function (event) {
                     var rows = $("#grid5").igGridSelection("selectedRows");
-                    apiViewer.log('The number of selected rows is:' + rows.length);
+                    apiViewer.log('$$(grid_api_row_number)' + rows.length);
                     $.each(rows, function (i, val) {
-                        apiViewer.log('Row with index ' + val.index + ' is selected');
+                        apiViewer.log('$$(grid_api_row_index1) ' + val.index + ' $$(grid_api_row_index2)');
                     });
                 }
             });
@@ -70,7 +70,7 @@ $(function () {
             $("#igButtonGetCellText").on({
                 click: function (e) {
                     var cell = $("#grid5").igGrid('cellAt', parseInt($('#columns').val()) - 1, parseInt($('#rows').val()) - 1);
-                    apiViewer.log('Cell Text: ' + $(cell).text());
+                    apiViewer.log('$$(grid_api_cell_text) ' + $(cell).text());
                 }
             });
 
@@ -110,19 +110,19 @@ $(function () {
                 columns: [{
                     // note: if primaryKey is set and data in primary column contains numbers,
                     // then the dataType: "number" is required, otherwise, dataSource may misbehave
-                    headerText: "Employee ID", key: "EmployeeID", width: "100px", dataType: "number"
+                    headerText: "$$(table_lbl_employeeID)", key: "EmployeeID", width: "100px", dataType: "number"
                 }, {
-                    headerText: "First Name", key: "FirstName", width: "130px"
+                    headerText: "$$(table_lbl_firstName)", key: "FirstName", width: "130px"
                 }, {
-                    headerText: "Last Name", key: "LastName", width: "100px"
+                    headerText: "$$(table_lbl_lastName)", key: "LastName", width: "100px"
                 }, {
-                    headerText: "Title", key: "Title", width: "150px"
+                    headerText: "$$(table_lbl_title)", key: "Title", width: "150px"
                 }, {
-                    headerText: "Birth Date", key: "BirthDate", width: "120px", dataType: "date"
+                    headerText: "$$(table_lbl_birthDate)", key: "BirthDate", width: "120px", dataType: "date"
                 }, {
-                    headerText: "Postal Code", key: "PostalCode", width: "150px", dataType: "number"
+                    headerText: "$$(table_lbl_postCode)", key: "PostalCode", width: "150px", dataType: "number"
                 }, {
-                    headerText: "Country", key: "Country", width: "150px", dataType: "string"
+                    headerText: "$$(table_lbl_country)", key: "Country", width: "150px", dataType: "string"
                 }
                 ],
                 dataSource: northwind,

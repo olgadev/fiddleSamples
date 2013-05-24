@@ -19,9 +19,9 @@ $(function () {
                     //searchField serves as the base node(s) for the XPaths
                     searchField: "//Person", 
                     fields: [
-                        { name: "Name", xpath: "./@Name" },
-                        { name: "Email", xpath: "Details/@Email" },
-                        { name: "Age", xpath: "Details/@Age" }
+                        { name: "$$(Northwind_Employees_Name)", xpath: "./@Name" },
+                        { name: "$$(Northwind_Employees_Email)", xpath: "Details/@Email" },
+                        { name: "$$(Northwind_Employees_Age)", xpath: "Details/@Age" }
                     ]
                 }
             );

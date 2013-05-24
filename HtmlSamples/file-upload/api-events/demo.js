@@ -11,19 +11,19 @@ $(function () {
             });
 
             $("#igUpload1").on("iguploadfileselected", function (e, ui) {
-                apiViewer.log("iguploadfileselected: [ " + "File Path: " + ui.filePath + "]");
+                apiViewer.log("iguploadfileselected: [ " + "$$(File_Path): " + ui.filePath + "]");
             });
 
             $("#igUpload1").on("iguploadfileuploading", function (e, ui) {
-                apiViewer.log("iguploadfileuploading: [ " + "File Path: " + ui.filePath + "]");
+                apiViewer.log("iguploadfileuploading: [ " + "$$(File_Path): " + ui.filePath + "]");
             });
 
             $("#igUpload1").on("iguploadfileuploaded", function (e, ui) {
-                apiViewer.log("iguploadfileuploaded: [ " + "File Size: " + ui.totalSize + "]");
+                apiViewer.log("iguploadfileuploaded: [ " + "$$(File_Size): " + ui.totalSize + "]");
             });
 
             $("#igUpload1").on("iguploadfileuploadaborted", function (e, ui) {
-                apiViewer.log("iguploadfileuploadaborted: [ " + "Upload Aborted: " + ui.filePath + "]");
+                apiViewer.log("iguploadfileuploadaborted: [ " + "$$(upload_aborted): " + ui.filePath + "]");
             });
 
             $("#igUpload1").on("iguploadcancelallclicked", function (e, ui) {
@@ -31,7 +31,7 @@ $(function () {
             });
 
             $("#igUpload1").on("iguploadonerror", function (e, ui) {
-                apiViewer.log("iguploadonerror: [ " + "Error Message: " + ui.errorMessage + "]");
+                apiViewer.log("iguploadonerror: [ " + "$$(error_message): " + ui.errorMessage + "]");
             });
 
             /*----------------- Instantiation -------------------------*/

@@ -4,13 +4,13 @@ $(function () {
                 height: 600,
                 width: 700,
                 columns: [
-                    { headerText: "Employee ID", key: "EmployeeID", dataType: "number" },
+                    { headerText: "$$(table_lbl_employeeID)", key: "EmployeeID", dataType: "number" },
                     {
-                        headerText: "Employee Names",
+                        headerText: "$$(table_lbl_names)",
                         group: [
-                        { headerText: "First Name", key: "FirstName", dataType: "string" },
-                        { headerText: "Last Name", key: "LastName", dataType: "string" },
-                        { headerText: "Title", key: "Title", dataType: "string" }
+                        { headerText: "$$(table_lbl_firstName)", key: "FirstName", dataType: "string" },
+                        { headerText: "$$(table_lbl_lastName)", key: "LastName", dataType: "string" },
+                        { headerText: "$$(table_lbl_title)", key: "Title", dataType: "string" }
                     ]
                     }
                 ],

@@ -29,65 +29,65 @@ $(function () {
                         metadata: {
                             cube: {
                                 name: "Sales",
-                                caption: "Sales",
+                                caption: "$$(Sales)",
                                 measuresDimension: {
-                                    caption: "Measures",
+                                    caption: "$$(Measures)",
                                     measures: [ //for each measure, name and aggregator are required
-                                        { caption: "Units Sold", name: "UnitsSold", aggregator: sumAggregator('UnitsSold') },
-                                        { caption: "Unit Price", name: "UnitPrice", aggregator: sumAggregator('UnitPrice') },
-                                        { caption: "Sale Value", name: "SaleValue", aggregator: saleValueCalculator }]
+                                        { caption: "$$(UnitsSold)", name: "UnitsSold", aggregator: sumAggregator('UnitsSold') },
+                                        { caption: "$$(UnitPrice)", name: "UnitPrice", aggregator: sumAggregator('UnitPrice') },
+                                        { caption: "$$(SaleValue)", name: "SaleValue", aggregator: saleValueCalculator }]
                                 },
                                 dimensions: [ // for each dimension
                                     {
-                                        caption: "Date", name: "Date", /*displayFolder: "Folder1\\Folder2",*/ hierarchies: [
+                                        caption: "$$(Date)", name: "Date", /*displayFolder: "Folder1\\Folder2",*/ hierarchies: [
                                             $.ig.OlapUtilities.prototype.getDateHierarchy(
                                                 "Date", // the source property name
                                                 ["year", "quarter", "month", "date"], // the date parts for which levels will be generated (optional)
                                                 "Dates", // The name for the hierarchy (optional)
-                                                "Date", // The caption for the hierarchy (optional)
-                                                ["Year", "Quarter", "Month", "Day"], // the captions for the levels (optional)
-                                                "All Periods") // the root level caption (optional)
+                                                "$$(Date)", // The caption for the hierarchy (optional)
+                                                ["$$(Year)", "$$(Quarter)", "$$(Month)", "$$(Day)"], // the captions for the levels (optional)
+                                                "$$(AllPeriods)") // the root level caption (optional)
                                         ]
                                     },
                                     {
-                                        caption: "Location", name: "Location", hierarchies: [{
-                                            caption: "Location", name: "Location", levels: [
+                                        caption: "$$(Location)", name: "Location", hierarchies: [{
+                                            caption: "$$(Location)", name: "Location", levels: [
                                                 {
-                                                    name: "AllLocations", caption: "All Locations",
-                                                    memberProvider: function (item) { return "All Locations"; }
+                                                    name: "AllLocations", caption: "$$(AllLocations)",
+                                                    memberProvider: function (item) { return "$$(AllLocations)"; }
                                                 },
                                                 {
-                                                    name: "Country", caption: "Country",
+                                                    name: "Country", caption: "$$(Country)",
                                                     memberProvider: function (item) { return item.Country; }
                                                 },
                                                 {
-                                                    name: "City", caption: "City",
+                                                    name: "City", caption: "$$(City)",
                                                     memberProvider: function (item) { return item.City; }
                                                 }]
                                         }]
                                     },
                                     {
-                                        caption: "Product", name: "Product", hierarchies: [{
-                                            caption: "Product", name: "Product", levels: [
+                                        caption: "$$(Product)", name: "Product", hierarchies: [{
+                                            caption: "$$(Product)", name: "Product", levels: [
                                                 {
-                                                    name: "AllProducts", caption: "All Products",
-                                                    memberProvider: function (item) { return "All Products"; }
+                                                    name: "AllProducts", caption: "$$(AllProducts)",
+                                                    memberProvider: function (item) { return "$$(AllProducts)"; }
                                                 },
                                                 {
-                                                    name: "ProductCategory", caption: "Category",
+                                                    name: "ProductCategory", caption: "$$(Category)",
                                                     memberProvider: function (item) { return item.ProductCategory; }
                                                 }]
                                         }]
                                     },
                                     {
-                                        caption: "Seller", name: "Seller", hierarchies: [{
-                                            caption: "Seller", name: "Seller", levels: [
+                                        caption: "$$(Seller)", name: "Seller", hierarchies: [{
+                                            caption: "$$(Seller)", name: "Seller", levels: [
                                                 {
-                                                    name: "AllSellers", caption: "All Sellers",
-                                                    memberProvider: function (item) { return "All Sellers"; }
+                                                    name: "AllSellers", caption: "$$(AllSellers)",
+                                                    memberProvider: function (item) { return "$$(AllSellers)"; }
                                                 },
                                                 {
-                                                    name: "SellerName", caption: "Seller",
+                                                    name: "SellerName", caption: "$$(Seller)",
                                                     memberProvider: function (item) { return item.SellerName; }
                                                 }]
                                         }]

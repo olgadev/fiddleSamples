@@ -1,7 +1,7 @@
 $(function () {
 
             //Sample XML Data
-            var xmlDoc = '<OrgChart Name="All Employees">' +
+            var xmlDoc = '<OrgChart Name="$$(Northwind_Employees_AllEmployees)">' +
                 '<Employee Name="Gustavo Achong" Age="42" Email="gachong@adventureworks.com">' +
                     '<Employee Name="Kim Abercrombie" Age="33" Email="kabercrombie@adventureworks.com" />' +
                     '<Employee Name="Lawrence Tapley" Age="52" Email="ltapley@adventureworks.com" />' +
@@ -43,23 +43,23 @@ $(function () {
                 dataSource: ds, //$.ig.DataSource object defined above
                 autoGenerateColumns: false,
                 columns: [
-                    { headerText: "Name", key: "Name" }
+                    { headerText: "$$(Northwind_Orders_Name)", key: "Name" }
                 ],
                 columnLayouts : [{
                     key: "Employee",
                     autoGenerateColumns: false,
                     columns: [
-                        { headerText: "Name", key: "Name" },
-                        { headerText: "Age", key: "Age" },
-                        { headerText: "Email", key: "Email" }
+                        { headerText: "$$(Northwind_Orders_Name)", key: "Name" },
+                        { headerText: "$$(Northwind_Orders_Age)", key: "Age" },
+                        { headerText: "$$(Northwind_Orders_Email)", key: "Email" }
                     ],
                     columnLayouts : [{
                         key: "Employee",
                         autoGenerateColumns: false,
                         columns: [
-                            { headerText: "Name", key: "Name" },
-                            { headerText: "Age", key: "Age" },
-                            { headerText: "Email", key: "Email" }
+                            { headerText: "$$(Northwind_Orders_Name)", key: "Name" },
+                            { headerText: "$$(Northwind_Orders_Age)", key: "Age" },
+                            { headerText: "$$(Northwind_Orders_Email)", key: "Email" }
                         ]
                     }],
                 }]

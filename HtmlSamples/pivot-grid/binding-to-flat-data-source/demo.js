@@ -11,39 +11,39 @@ $(function () {
                 metadata: {
                     cube: {
                         name: "Sales",
-                        caption: "Sales",
+                        caption: "$$(Sales)",
                         measuresDimension: {
-                            caption: "Measures",
+                            caption: "$$(Measures)",
                             measures: [ //for each measure, name and aggregator are required
                                 {
-                                    caption: "Units Sold", name: "UnitsSold",
+                                    caption: "$$(UnitsSold)", name: "UnitsSold",
                                     // returns a function that will be used as sum aggregatro on the 'UnitsSold property' of the data objects
                                     aggregator: $.ig.OlapUtilities.prototype.sumAggregator('UnitsSold')
                                 }]
                         },
                         dimensions: [ // for each dimension name and hierarchies are required
                             {
-                                caption: "Seller", name: "Seller", hierarchies: [{
-                                    caption: "Seller", name: "Seller", levels: [
+                                caption: "$$(Seller)", name: "Seller", hierarchies: [{
+                                    caption: "$$(Seller)", name: "Seller", levels: [
                                         {
-                                            name: "AllSellers", caption: "All Sellers",
-                                            memberProvider: function (item) { return "All Sellers"; }
+                                            name: "AllSellers", caption: "$$(AllSellers)",
+                                            memberProvider: function (item) { return "$$(AllSellers)"; }
                                         },
                                         {
-                                            name: "SellerName", caption: "Seller",
+                                            name: "SellerName", caption: "$$(Seller)",
                                             memberProvider: function (item) { return item.SellerName; }
                                         }]
                                 }]
                             },
                             {
-                                caption: "Date", name: "Date", /*displayFolder: "Folder1\\Folder2",*/ hierarchies: [
+                                caption: "$$(Date)", name: "Date", /*displayFolder: "Folder1\\Folder2",*/ hierarchies: [
                                     $.ig.OlapUtilities.prototype.getDateHierarchy(
                                         "Date", // the source property name
                                         ["year", "quarter", "month", "date"], // the date parts for which levels will be generated (optional)
                                         "Dates", // The name for the hierarchy (optional)
-                                        "Date", // The caption for the hierarchy (optional)
-                                        ["Year", "Quarter", "Month", "Day"], // the captions for the levels (optional)
-                                        "All Periods") // the root level caption (optional)
+                                        "$$(Date)", // The caption for the hierarchy (optional)
+                                        ["$$(Year)", "$$(Quarter)", "$$(Month)", "$$(Day)"], // the captions for the levels (optional)
+                                        "$$(AllPeriods)") // the root level caption (optional)
                                 ]
                             }
                         ]

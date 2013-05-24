@@ -1,13 +1,13 @@
 $(function () {
 
             // Initialize the open button with igButton
-            $("#openDialog").igButton({ labelText: "Open Dialog" });
+            $("#openDialog").igButton({ labelText: "$$(open)" });
 
             // Initialize the igDialog
             $("#dialog").igDialog({
                 height: 440,
                 width: 440,
-                headerText: "http://www.infragistics.com",
+                headerText: "$$(igwebsite)",
                 showMinimizeButton: true,
                 showMaximizeButton: true,
                 showPinButton: true

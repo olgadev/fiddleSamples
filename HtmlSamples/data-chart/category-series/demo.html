@@ -1,4 +1,4 @@
-<script src="http://igniteuisamples.dev.infragistics.local/13-1/js/modernizr.min.js"></script>
+updated <script src="http://igniteuisamples.dev.infragistics.local/13-1/js/modernizr.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/jquery/20131/latest/js/infragistics.core.js"></script>
@@ -8,27 +8,27 @@
 
 <script id="tooltipTemplate1" type="text/x-jquery-tmpl">
         <div id="tooltip" class="ui-widget-content ui-corner-all">
-            <span id="tooltipValue">Value: ${item.Value1}</span>
+            <span id="tooltipValue">$$(Chart_lbl_seriesValue): ${item.Value1}</span>
         </div>
     </script>
 <script id="tooltipTemplate2" type="text/x-jquery-tmpl">
         <div id="Div1" class="shadow ui-widget-content ui-corner-all">
-            <span id="Span1">Value: ${item.Value2}</span>
+            <span id="Span1">$$(Chart_lbl_seriesValue): ${item.Value2}</span>
         </div>
     </script>
 
 <div class="selectionOptions">
-        Series type:&nbsp
+        $$(Chart_lbl_seriesType):&nbsp
         <select id="seriesType">
-            <option value="area">Area</option>
-            <option value="column">Column</option>
-            <option value="line" selected="selected">Line</option>
-            <option value="splineArea">Spline Area</option>
-            <option value="spline">Spline</option>
-            <option value="stepArea">Step Area</option>
-            <option value="stepLine">Step Line</option>
-            <option value="waterfall">Waterfall</option>
-            <option value="point">Point (New)</option>
+            <option value="area">$$(Chart_sel_area)</option>
+            <option value="column">$$(Chart_sel_column)</option>
+            <option value="line" selected="selected">$$(Chart_sel_line)</option>
+            <option value="splineArea">$$(Chart_sel_splineArea)</option>
+            <option value="spline">$$(Chart_sel_spline)</option>
+            <option value="stepArea">$$(Chart_sel_stepArea)</option>
+            <option value="stepLine">$$(Chart_sel_stepLine)</option>
+            <option value="waterfall">$$(Chart_sel_waterfall)</option>
+            <option value="point">$$(Chart_sel_point)</option>
         </select>
     </div>
 
