@@ -12,19 +12,19 @@ $(function () {
             // process events of checkboxes
             $("#enableDelete").on({
                 change: function (e) {
-                    $("#grid3").igGridUpdating("option", "enableDeleteRow", $(this).is(":checked"));
+                    $("#grid").igGridUpdating("option", "enableDeleteRow", $(this).is(":checked"));
                 }
             });
 
             $("#enableAddRow").on({
                 change: function (e) {
-                    $("#grid3").igGridUpdating("option", "enableAddRow", $(this).is(":checked"));
+                    $("#grid").igGridUpdating("option", "enableAddRow", $(this).is(":checked"));
                 }
             });
 
             $("#showButtons").on({
                 change: function (e) {
-                    $("#grid3").igGridUpdating("option", "showDoneCancelButtons", $(this).is(":checked"));
+                    $("#grid").igGridUpdating("option", "showDoneCancelButtons", $(this).is(":checked"));
                 }
             });
 
@@ -32,14 +32,14 @@ $(function () {
             $("#editMode").on({
                 change: function (e) {
                     var editMode = $(this).val();
-                    $("#grid3").igGridUpdating("option", "editMode", editMode);
+                    $("#grid").igGridUpdating("option", "editMode", editMode);
                 }
             });
 
             $("#startEditTriggers").on({
                 change: function (e) {
                     var startEditTriggers = $(this).val();
-                    $("#grid3").igGridUpdating("option", "startEditTriggers", startEditTriggers);
+                    $("#grid").igGridUpdating("option", "startEditTriggers", startEditTriggers);
                 }
             });
 
@@ -48,10 +48,10 @@ $(function () {
             $("#deleteRow").on({
                 click: function (e) {
                     var rowIndex = $("#rowSelect").igNumericEditor("option", "value"),
-                        tr = $("#grid3").igGrid("rowAt", parseInt(rowIndex));
+                        tr = $("#grid").igGrid("rowAt", parseInt(rowIndex));
                     if (!tr) return;
 
-                    $("#grid3").igGridUpdating("deleteRow", rowIndex, tr);
+                    $("#grid").igGridUpdating("deleteRow", rowIndex, tr);
                 }
             });
 
@@ -67,40 +67,39 @@ $(function () {
                         "Country": $("#country").val()
                     };
 
-                    $("#grid3").igGridUpdating("addRow", rowObj);
+                    $("#grid").igGridUpdating("addRow", rowObj);
                 }
             });
 
             /*----------------- Event Examples -------------------------*/
 
-            $("#grid3").on("iggridupdatingrowdeleting", function (evt, ui) {
+            $("#grid").on("iggridupdatingrowdeleting", function (evt, ui) {
                 var message = "iggridupdatingrowdeleting";
                 apiViewer.log(message);
             });
 
-            $("#grid3").on("iggridupdatingrowadding", function (evt, ui) {
+            $("#grid").on("iggridupdatingrowadding", function (evt, ui) {
                 var message = "iggridupdatingrowadding";
                 apiViewer.log(message);
             });
 
-            $("#grid3").on("iggridupdatingeditcellending", function (evt, ui) {
+            $("#grid").on("iggridupdatingeditcellending", function (evt, ui) {
                 var message = "iggridupdatingeditcellending";
                 apiViewer.log(message);
             });
 
-            $("#grid3").on("iggridupdatingeditrowstarting", function (evt, ui) {
+            $("#grid").on("iggridupdatingeditrowstarting", function (evt, ui) {
                 var message = "iggridupdatingeditrowstarting";
                 apiViewer.log(message);
             });
 
-            $("#grid3").on("iggridupdatingeditrowending", function (evt, ui) {
+            $("#grid").on("iggridupdatingeditrowending", function (evt, ui) {
                 var message = "iggridupdatingeditrowending";
                 apiViewer.log(message);
             });
 
             /*----------------- Instantiation -------------------------*/
-
-            $("#grid3").igGrid({
+            $("#grid").igGrid({
                 virtualization: false,
                 autoGenerateColumns: false,
                 renderCheckboxes: true,
@@ -172,7 +171,7 @@ $(function () {
             $("#employeeID").igEditor({
                 width: 100,
                 type: "numeric",
-                value: $("#grid3").data("igGrid").element.find("tr").length + 1,
+                value: $("#grid").data("igGrid").element.find("tr").length + 1,
                 disabled: true
             });
 

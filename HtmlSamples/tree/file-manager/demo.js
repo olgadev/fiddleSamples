@@ -46,7 +46,7 @@ $(function () {
                     textKey: "Text",
                     valueKey: "Value",
                     imageUrlKey: "ImageUrl",
-                    childDataProperty: "Folder",
+                    childDataProperty: "Folder"
                 },
                 // Enable Drag-and-drop feature
                 dragAndDrop: true,

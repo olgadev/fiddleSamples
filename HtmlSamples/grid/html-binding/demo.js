@@ -1,7 +1,5 @@
 $(function () {
-
-            $("#grid6").igGrid({
+            $("#grid").igGrid({
                 defaultColumnWidth: 150
             });
-
         });

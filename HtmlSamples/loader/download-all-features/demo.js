@@ -5,7 +5,7 @@ $.ig.loader({
         });
 
         $.ig.loader(function () {
-            $("#grid1").igHierarchicalGrid({
+            $("#grid").igHierarchicalGrid({
                 features: [
                     {
                         name: "Paging",

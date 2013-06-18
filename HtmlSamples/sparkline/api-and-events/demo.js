@@ -50,7 +50,7 @@ $(function () {
             $("#sparkline").igSparkline({
                 dataSource: northwindInvoices,
                 height: "100px",
-                width: "300px",
+                width: "290px",
                 valueMemberPath: 'ExtendedPrice',
                 labelMemberPath: 'OrderDate'
             });

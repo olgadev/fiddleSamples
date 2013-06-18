@@ -27,14 +27,14 @@ $(function () {
             );
 
             //This creates an Infragistics datasource from the XML 
-            //and the Schema which can be consumed by the grid11.
+            //and the Schema which can be consumed by the grid.
             var ds = new $.ig.DataSource({
                 type: "xml",
                 dataSource: xmlDoc,
                 schema: xmlSchema 
             });
 
-            $("#grid11").igGrid({
+            $("#grid").igGrid({
                 dataSource: ds //$.ig.DataSource defined above
             });
 

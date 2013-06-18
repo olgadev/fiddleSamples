@@ -16,8 +16,8 @@ $(function () {
             doGeneration();
 
             $("#columnChart").igDataChart({
-                width: "500px",
-                height: "500px",
+                width: "98%",
+                height: "400px",
                 dataSource: currDataSource,
                 axes: [{
                     name: "xAxis",
@@ -52,8 +52,8 @@ $(function () {
             });
 
             $("#barChart").igDataChart({
-                width: "500px",
-                height: "500px",
+                width: "98%",
+                height: "400px",
                 dataSource: currDataSource,
                 legend: { element: "barLegend" },
                 axes: [{

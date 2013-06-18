@@ -1,2 +1,4 @@
 td { vertical-align: top; }
-        .chartElement { margin-right: 10px; }
+        .chartElement {
+            padding-bottom: 20px;
+        }

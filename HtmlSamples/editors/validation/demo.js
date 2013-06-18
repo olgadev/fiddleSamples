@@ -136,6 +136,7 @@ function getShowAllErrorsOnSubmit() {
                 $("#submitMessage").stop(true, true);
                 $("#formSubmitMessage").html(message).stop(true, true).fadeIn(500).fadeOut(2000);
                 var form = $("#validationForm")[0];
+                form.action = location.href;
                 form.submit();
             });
             $('#customErrorMessegeText').blur(function () {
@@ -150,6 +151,7 @@ function getShowAllErrorsOnSubmit() {
             });
 
             $('#validationForm').submit(function () {
+                this.action = location.href;
                 var message = "$$(submit_fired)";
                 $("#formSubmitMessage").stop(true, true);
                 $("#submitMessage").html(message).stop(true, true).fadeIn(500).fadeOut(2000);

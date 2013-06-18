@@ -44,10 +44,10 @@ $(function () {
                 var parentNode = $("#tree").igTree("selectedNode").element;                
 
                 if (parentNode == null) {
-                    $("#tree").igTree("addNode", { Text: "New Node" });
+                    $("#tree").igTree("addNode", { Text: "$$(NewNode)" });
                 }
                 else {
-                    $("#tree").igTree("addNode", { Text: "New Node" }, parentNode);
+                    $("#tree").igTree("addNode", { Text: "$$(NewNode)" }, parentNode);
                     $("#tree").igTree("expand", parentNode);
                 }
 

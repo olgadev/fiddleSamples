@@ -7,13 +7,13 @@ $(function () {
             /*----------------- Method & Option Examples -------------------------*/
 
             $("input[name='cellMergingInitialState']").click(function () {
-                $("#grid1").igGrid("destroy");
+                $("#grid").igGrid("destroy");
                 createGrid();
             });
 
             /*----------------- Event Examples -------------------------*/
 
-            $("#grid1").on("iggridcellmergingcellsmerged", function (evt, ui) {
+            $("#grid").on("iggridcellmergingcellsmerged", function (evt, ui) {
                 var message = "$$(cell_merging_logging_caption)";
                 apiViewer.log(message);
                 message = "$$(cell_merging_row_index)" + ui.rowIndex;
@@ -36,7 +36,7 @@ $(function () {
         function createGrid() {
             var initialState = $('input:radio[name=cellMergingInitialState]:checked').val();
 
-            $("#grid1").igGrid({
+            $("#grid").igGrid({
                 height: "100%",
                 width: "100%",
                 autoGenerateColumns: false,

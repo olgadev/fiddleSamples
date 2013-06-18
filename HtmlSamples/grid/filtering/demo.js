@@ -1,5 +1,5 @@
 $(function () {
-            $("#grid4").igGrid({
+            $("#grid").igGrid({
                 autoGenerateColumns: false,
                 columns: [
                     { headerText: "$$(table_lbl_employeeID)", key: "EmployeeID", dataType: "number" },

@@ -7,18 +7,20 @@ $(function () {
             var _isDataBound = false;
 
             /*----------------- Method & Option Examples -------------------------*/
-
+            $("#getUnboundValues").igButton({ labelText: $("#getUnboundValues").val() });
             $("#getUnboundValues").click(function (e) {
-                var columnKey = $("#columnKey").val();
-                var unboundValues = $('#grid10').igGrid('getUnboundValues', columnKey);
+                var columnText = $("#columnText").val();
+                var column = $('#grid').igGrid("columnByText", $.trim(columnText));
+                var unboundValues = $('#grid').igGrid('getUnboundValues', column.key);
                 message = "$$(unbound_col_values) " + unboundValues;
                 apiViewer.log(message);
             });
 
+            $("#getUnboundColumnByKey").igButton({ labelText: $("#getUnboundColumnByKey").val() });
             $("#getUnboundColumnByKey").click(function (e) {
-
-                var columnKey = $("#columnKey").val();
-                var unboundColumn = $('#grid10').igGrid('getUnboundColumnByKey', columnKey);
+                var columnText = $("#columnText").val();
+                var column = $('#grid').igGrid("columnByText", $.trim(columnText));
+                var unboundColumn = $('#grid').igGrid('getUnboundColumnByKey', column.key);
 
                 var message = "$$(unbound_col_function) " + unboundColumn.formula;
                 apiViewer.log(message);
@@ -30,6 +32,7 @@ $(function () {
                 apiViewer.log(message);
             });
 
+            $("#setUnboundValues").igButton({ labelText: $("#setUnboundValues").val() });
             $("#setUnboundValues").click(function (e) {
                 var i, vals = [], boolVals = [];
 
@@ -37,27 +40,27 @@ $(function () {
                     vals.push(new Date());
                     boolVals.push(false);
                 }
-                $('#grid10').igGrid('setUnboundValues', 'PromotionExpDate', vals);
-                $('#grid10').igGrid('setUnboundValues', 'IsPromotion', boolVals);
+                $('#grid').igGrid('setUnboundValues', 'PromotionExpDate', vals);
+                $('#grid').igGrid('setUnboundValues', 'IsPromotion', boolVals);
                 return;
             });
 
             /*----------------- Event Examples -------------------------*/
 
-            $("#grid10").on("iggridupdatingdatadirty", function (event, ui) {
-                $("#grid10").igGrid("saveChanges");
+            $("#grid").on("iggridupdatingdatadirty", function (event, ui) {
+                $("#grid").igGrid("saveChanges");
                 return false;
             });
 
-            $("#grid10").on("iggridcellclick", function (event, ui) {
-                var cell = $('#grid10').igGrid("cellAt", ui.colIndex, ui.rowIndex);
+            $("#grid").on("iggridcellclick", function (event, ui) {
+                var cell = $('#grid').igGrid("cellAt", ui.colIndex, ui.rowIndex);
 
                 if (ui.colKey == "Total") {
                     apiViewer.log("$$(unbound_col_Total) " + $(cell).text());
                 }
             });
 
-            $("#grid10").on("iggriddatabound", function (event, ui) {
+            $("#grid").on("iggriddatabound", function (event, ui) {
 
                 if (_isDataBound === false) {
                     _isDataBound = true;
@@ -80,23 +83,22 @@ $(function () {
                 }
             });
 
-            $("#grid10").on("iggridupdatingeditrowended", function (event, ui) {
+            $("#grid").on("iggridupdatingeditrowended", function (event, ui) {
                 var unitPrice = ui.values['UnitPrice'];
                 var unitsInStock = ui.values['UnitsInStock'];
                 var totalValue = (unitPrice * unitsInStock) || ui.values["Total"];
-                $("#grid10").igGridUpdating("setCellValue", ui.rowID, "Total", totalValue);
+                $("#grid").igGridUpdating("setCellValue", ui.rowID, "Total", totalValue);
 
                 if (totalValue < 1000) {
-                    $("#grid10").igGridUpdating("setCellValue", ui.rowID, "IsPromotion", true);
+                    $("#grid").igGridUpdating("setCellValue", ui.rowID, "IsPromotion", true);
                 }
                 else {
-                    $("#grid10").igGridUpdating("setCellValue", ui.rowID, "IsPromotion", false);
+                    $("#grid").igGridUpdating("setCellValue", ui.rowID, "IsPromotion", false);
                 }
             });
 
             /*----------------- Instantiation -------------------------*/
-
-            $("#grid10").igGrid({
+            $("#grid").igGrid({
                 primaryKey: "ProductID",
                 width: '100%',
                 height: '600px',
@@ -116,7 +118,7 @@ $(function () {
                     { headerText: "$$(unbound_isPromotion)", key: "IsPromotion", dataType: "bool", unbound: true, format: "checkbox" },
                     {
                         headerText: "$$(unbound_total)", key: "Total", dataType: "number", unbound: true,
-                            formula: function CalculateTotal(data, grid) { return data["UnitPrice"] * data["UnitsInStock"];}, template: "Total: ${Total}"
+                        formula: function CalculateTotal(data, grid) { return data["UnitPrice"] * data["UnitsInStock"]; }, template: "Total: ${Total}"
                     }
                 ],
 

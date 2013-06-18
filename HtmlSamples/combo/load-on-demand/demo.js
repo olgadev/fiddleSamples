@@ -24,6 +24,7 @@
                 responseDataKey: "d.results.Results",
                 responseTotalRecCountKey: "d.results.Count",
                 dataSource: "http://labs.infragistics.com/igniteui/api/invoices?$top=1000&callback=?",
+                dataSourceUrl: "http://labs.infragistics.com/igniteui/api/invoices?$top=1000&callback=?",
                 filteringType: "remote",
                 width: "250px",
                 textKey: "ProductName",
@@ -34,6 +35,7 @@
                 footerTemplate: "<div class='dropDownHeaderFooter'>$$(product_count): {0} / {3}</div>",
                 itemTemplate: "<div>${ProductName} (${Quantity})</div>",
                 nullText: "$$(please_product)",
+                filterExprUrlKey: 'startsWith',
                 selectionChanged: function (evt, ui) {
                     //  Clear the selected item table and hide the div
                     $("#table").empty();

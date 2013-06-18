@@ -9,42 +9,38 @@
 <link href="http://cdn-na.infragistics.com/jquery/20131/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <link href="http://igniteuisamples.dev.infragistics.local/13-1/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
 
-<table id="grid10">
-    </table>
-    <br />
+<div class="api-explorer">
+        <fieldset id="getUCAPI">
+            <legend>$$(getUCAPI_lbl)</legend>
+            <table>
+                <tr>
+                    <td>
+                        <select id="columnText">
+                            <option selected="selected">$$(unbound_total)</option>
+                            <option>$$(unbound_promotionExpDate)</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button id="getUnboundColumnByKey" style="width: 250px">getUnboundColumnByKey</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="getUnboundValues" style="width: 250px">getUnboundValues</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
 
-    
-
-    <div class="api-explorer">
-        <table style="width: 100%">
-            <tr>
-                <td style="width: 50%">
-                    <select id="columnKey">
-                        <option selected="selected">$$(unbound_total)</option>
-                        <option>$$(unbound_isPromotion)</option>
-                        <option>$$(unbound_promotionExpDate)</option>
-                    </select>
-                </td>
-                <td>
-                    <button id="getUnboundColumnByKey" style="width: 300px">getUnboundColumnByKey</button>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%"></td>
-                <td>
-                    <button id="getUnboundValues" style="width: 300px">getUnboundValues</button>
-                </td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-                <td style="width: 50%">
-                    <button id="setUnboundValues">setUnboundValues</button>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-
+        <fieldset id="setUCAPI">
+            <legend>$$(setUnboundValues_lbl)</legend>
+            <button id="setUnboundValues" style="width: 250px">setUnboundValues</button>
+        </fieldset>
     </div>
 
+    
+    <table id="grid">
+    </table>
+   
     <div class="api-viewer"></div>

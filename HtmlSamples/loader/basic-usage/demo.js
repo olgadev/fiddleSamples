@@ -5,7 +5,7 @@ $.ig.loader({
 	    });
 
 	    $.ig.loader(function () {
-	        $("#grid1").igGrid({
+	        $("#grid").igGrid({
 	            autoGenerateColumns: false,
 	            columns: [
 					{ headerText: "$$(ID)", key: "ProductID", dataType: "number" },

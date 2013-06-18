@@ -9,14 +9,14 @@ $(function () {
             // process events of select options
             $("#PageSizeSelect").on({
                 change: function (e) {
-                    $('#grid5').igGridPaging('pageSize', parseInt($(e.srcElement).val()));
+                    $('#grid').igGridPaging('pageSize', parseInt($(e.srcElement).val()));
                     AddPageOptions(parseInt($(e.srcElement).val()));
                 }
             });
 
             $("#PageIndexSelect").on({
                 change: function (e) {
-                    $('#grid5').igGridPaging('pageIndex', parseInt($(e.srcElement).val()));
+                    $('#grid').igGridPaging('pageIndex', parseInt($(e.srcElement).val()));
                 }
             });
 
@@ -32,19 +32,19 @@ $(function () {
                     var expr = $("#filterExpr").val(),
                         condition = $("#cond_list").val(),
                         filterColumn = $("#filterColumn").val();
-                    $("#grid5").igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                    $("#grid").igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
                 }
             });
 
             $('#SelectRow').on({
                 click: function (event) {
-                    $('#grid5').igGridSelection('selectRow', parseInt($('#RowSelect').val()));
+                    $('#grid').igGridSelection('selectRow', parseInt($('#RowSelect').val()));
                 }
             });
 
             $('#GetSelectedRows').on({
                 click: function (event) {
-                    var rows = $("#grid5").igGridSelection("selectedRows");
+                    var rows = $("#grid").igGridSelection("selectedRows");
                     apiViewer.log('$$(grid_api_row_number)' + rows.length);
                     $.each(rows, function (i, val) {
                         apiViewer.log('$$(grid_api_row_index1) ' + val.index + ' $$(grid_api_row_index2)');
@@ -54,14 +54,14 @@ $(function () {
 
             $("#igButtonDataBind").on({
                 click: function (e) {
-                    $("#grid5").igGrid('dataBind');
+                    $("#grid").igGrid('dataBind');
                 }
             });
 
             $("#igButtonGetRowIndex").on({
                 click: function (e) {
                     var rowIndex = parseInt($('#rows').val()) - 1,
-                         row = $("#grid5").igGrid('rowAt', rowIndex);
+                         row = $("#grid").igGrid('rowAt', rowIndex);
                     if ($(row).length)
                         apiViewer.log('Row Index: ' + rowIndex);
                 }
@@ -69,41 +69,40 @@ $(function () {
 
             $("#igButtonGetCellText").on({
                 click: function (e) {
-                    var cell = $("#grid5").igGrid('cellAt', parseInt($('#columns').val()) - 1, parseInt($('#rows').val()) - 1);
+                    var cell = $("#grid").igGrid('cellAt', parseInt($('#columns').val()) - 1, parseInt($('#rows').val()) - 1);
                     apiViewer.log('$$(grid_api_cell_text) ' + $(cell).text());
                 }
             });
 
             /*----------------- Event Examples -------------------------*/
 
-            $("#grid5").on("iggridselectionrowselectionchanging", function (evt, ui) {
+            $("#grid").on("iggridselectionrowselectionchanging", function (evt, ui) {
                 var message = "iggridselectionrowselectionchanging";
                 apiViewer.log(message);
             });
 
-            $("#grid5").on("iggridselectionactiverowchanged", function (evt, ui) {
+            $("#grid").on("iggridselectionactiverowchanged", function (evt, ui) {
                 var message = "iggridselectionactiverowchanged";
                 apiViewer.log(message);
             });
 
-            $("#grid5").on("iggridfilteringdatafiltering", function (evt, ui) {
+            $("#grid").on("iggridfilteringdatafiltering", function (evt, ui) {
                 var message = "iggridfilteringdatafiltering";
                 apiViewer.log(message);
             });
 
-            $("#grid5").on("iggridrendering", function (evt, ui) {
+            $("#grid").on("iggridrendering", function (evt, ui) {
                 var message = "iggridrendering";
                 apiViewer.log(message);
             });
 
-            $("#grid5").on("iggriddatabinding", function (evt, ui) {
+            $("#grid").on("iggriddatabinding", function (evt, ui) {
                 var message = "iggriddatabinding";
                 apiViewer.log(message);
             });
 
             /*----------------- Instantiation -------------------------*/
-
-            $("#grid5").igGrid({
+            $("#grid").igGrid({
                 autoGenerateColumns: false,
                 renderCheckboxes: true,
                 primaryKey: "EmployeeID",
@@ -145,7 +144,7 @@ $(function () {
                 ]
             });
 
-            var gridPageSize = $('#grid5').igGridPaging('pageSize');
+            var gridPageSize = $('#grid').igGridPaging('pageSize');
             AddPageOptions(gridPageSize);
             AddOptions();
             SetFilterConditions();
@@ -155,13 +154,13 @@ $(function () {
             $("#rows").empty();
             $("#columns").empty();
 
-            var rows = $("#grid5").igGrid("rows");
+            var rows = $("#grid").igGrid("rows");
             for (var i = 0; i < rows.length; i++) {
                 $('#RowSelect').append('<option>' + i + '</option>');
                 $("#rows").append("<option>" + (i + 1) + "</option>");
             }
 
-            var columns = $("#grid5").igGrid("option", "columns");
+            var columns = $("#grid").igGrid("option", "columns");
             for (var i = 0; i < columns.length; i++) {
                 $("#columns").append("<option>" + (i + 1) + "</option>");
                 $("#filterColumn").append("<option>" + columns[i].key + "</option>");

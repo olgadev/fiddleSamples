@@ -43,7 +43,7 @@ $(function () {
                 autoGenerateColumns: false,
                 primaryKey: "ID",
                 autoCommit: true,
-                width: 710,
+                width: "100%",
                 height: 360,
                 columns: [
                     { headerText: "", key: "ID", dataType: "number", width: "30px" },

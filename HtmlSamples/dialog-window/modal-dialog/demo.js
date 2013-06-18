@@ -9,8 +9,8 @@ $(function () {
                 modal: true,
                 draggable: false,
                 resizable: false,
-                height: "460px",
-                width: "460px"
+                height: "330px",
+                width: "290px"
             });
 
             $("#openDialog").on({

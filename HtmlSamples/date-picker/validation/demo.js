@@ -10,6 +10,7 @@ $(function () {
             $("#btnFormSubmit").click(function (e) {
                 
                 var form = $("#datePickerForm")[0];
+                form.action = location.href;
                 form.submit();
 
             });

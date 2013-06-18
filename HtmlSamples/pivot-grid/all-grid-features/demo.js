@@ -65,6 +65,6 @@ $(function () {
                 },
                 dataSource: dataSource,
                 height: "565px",
-                width: "915px"
+                width: "100%"
             });
         });

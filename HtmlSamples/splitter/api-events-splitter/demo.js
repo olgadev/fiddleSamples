@@ -48,6 +48,18 @@ $(function () {
                 }
             });
 
+            $('#igButtonSplitterFirstPanelSize').on({
+                click: function () {
+                    $("#splitter").igSplitter("setFirstPanelSize", $("#firstPanelSize").val());
+                }
+            });
+
+            $('#igButtonSplitterSecondPanelsize').on({
+                click: function () {
+                    $("#splitter").igSplitter("setSecondPanelSize").text($("#secondPanelSize").val());
+                }
+            });
+
             /*----------------- Event Examples -------------------------*/
 
             $("#splitter").on("igsplitterresizestarted", function (evt, ui) {

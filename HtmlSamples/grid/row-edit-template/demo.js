@@ -10,7 +10,7 @@ $(function () {
 
             /*----------------- Event Examples -------------------------*/
 
-            $("#grid9").on("iggridupdatingroweditdialogopened", function (evt, ui) {
+            $("#grid").on("iggridupdatingroweditdialogopened", function (evt, ui) {
                 var currDataRow = ui.dialogElement.data('tr');
                 var message = "$$(rowEditTemplate_eventFired) ";
                 for (var i = 0; i < currDataRow[0].cells.length; i++) {
@@ -20,8 +20,7 @@ $(function () {
             });
 
             /*----------------- Instantiation -------------------------*/
-
-            $("#grid9").igGrid({
+            $("#grid").igGrid({
                 virtualization: false,
                 autoGenerateColumns: false,
                 renderCheckboxes: true,

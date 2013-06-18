@@ -1,5 +1,5 @@
 $(function () {
-            $("#grid8").igGrid({
+            $("#grid").igGrid({
                 columns: [
                     { headerText: "$$(Northwind_Customers_CustomerID)", key: "ID", dataType: "string" },
                     { headerText: "$$(Northwind_Customers_CompanyName)", key: "CompanyName", dataType: "string" },
