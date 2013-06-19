@@ -1,3 +1,4 @@
+$(function () {
 $.ig.loader({
 	        scriptPath: "http://cdn-na.infragistics.com/jquery/20131/latest/js/",
 	        cssPath: "http://cdn-na.infragistics.com/jquery/20131/latest/css/",
@@ -23,4 +24,4 @@ $.ig.loader({
 				}
 	            ]
 	        });
-	    });
+	    });});

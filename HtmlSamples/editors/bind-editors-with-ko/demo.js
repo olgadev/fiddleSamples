@@ -1,3 +1,4 @@
+$(function () {
 var viewModel = {
             orderDate: ko.observable("10/24/2012"),
             shipDate: ko.observable("11/12/2012"),
@@ -10,4 +11,4 @@ var viewModel = {
 
         $(function () {
             ko.applyBindings(viewModel);
-        });
+        });});

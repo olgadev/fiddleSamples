@@ -1,3 +1,4 @@
+$(function () {
 //  http://www.imdb.com/find?q=Ivan+Ivanov&s=nm
         var model = [
                 { name: "Adam Sandler", id: "nm0001191" },
@@ -100,4 +101,4 @@
 
         function setListLength() {
             $("#listboxActors").attr("size", viewModel.actors().length);
-        }
+        }});

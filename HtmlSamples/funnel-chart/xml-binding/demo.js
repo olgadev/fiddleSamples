@@ -1,3 +1,4 @@
+$(function () {
 var xmlDoc =
             '<CompanyBudget>' +
                 '<BudgetEntry Department="$$(Chart_lbl_development)" Budget="100" />' +
@@ -40,4 +41,4 @@ var xmlDoc =
                 outerLabelMemberPath: "Department",
                 outerLabelVisibility: "visible"
             });
-        });
+        });});

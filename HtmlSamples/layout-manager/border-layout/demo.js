@@ -1,3 +1,4 @@
+$(function () {
 $(document).ready(function () {
             // attach to events so that we can add the items content
             $('#layout').on("iglayoutmanageritemrendered", function (event, args) {
@@ -30,4 +31,4 @@ $(document).ready(function () {
                     rightWidth: "20%"
                 }
             });
-        });
+        });});

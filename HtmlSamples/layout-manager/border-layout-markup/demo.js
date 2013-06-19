@@ -1,3 +1,4 @@
+$(function () {
 $(document).ready(function () {
                 $('#layout').igLayoutManager({
                     layoutMode: "border",
@@ -6,4 +7,4 @@ $(document).ready(function () {
                         rightWidth: "20%"
                     }
                 });
-            });
+            });});

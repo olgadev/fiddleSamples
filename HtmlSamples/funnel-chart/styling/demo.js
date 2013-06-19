@@ -1,3 +1,4 @@
+$(function () {
 var data = [
             { Budget: 30, Department: "$$(Chart_lbl_administration)" },
             { Budget: 50, Department: "$$(Chart_lbl_sales)" },
@@ -34,4 +35,4 @@ var data = [
                 outerLabelMemberPath: "Department",
                 outerLabelVisibility: "visible"
             });
-        });
+        });});

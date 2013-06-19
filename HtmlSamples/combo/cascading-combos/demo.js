@@ -1,3 +1,4 @@
+$(function () {
 var dsCountry, dsCascTowns, dsCountryCascading,
             dsCountryCascading, dsStatesUSCascading, dsDistrictBGCascading;
 
@@ -122,4 +123,4 @@ var dsCountry, dsCascTowns, dsCountryCascading,
                 parentCombo: $("#comboCountryCascading")
             });
 
-        });
+        });});

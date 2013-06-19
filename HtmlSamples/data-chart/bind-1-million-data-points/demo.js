@@ -1,3 +1,4 @@
+$(function () {
 var currData, currDataSource, doGeneration, startTime = null;
 
 	    function doGeneration() {
@@ -60,4 +61,4 @@ var currData, currDataSource, doGeneration, startTime = null;
 	        doGeneration();
 	        assignData();
 	        $(".message").hide();
-	    });
+	    });});

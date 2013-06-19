@@ -1,3 +1,4 @@
+$(function () {
 var colors = [
             { Name: "$$(Black)" },
             { Name: "$$(Blue)" },
@@ -36,4 +37,4 @@ var colors = [
                 multiSelection: "onWithCheckboxes"
             });
 
-        });
+        });});

@@ -1,3 +1,4 @@
+$(function () {
 $.support.cors = true;
 
         $(function () {
@@ -74,4 +75,4 @@ $.support.cors = true;
                 height: "565px",
                 width: "680px"
             });
-        });
+        });});

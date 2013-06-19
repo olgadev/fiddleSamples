@@ -1,3 +1,4 @@
+$(function () {
 var viewModel;
 
         //  Define empty objects for Category and Product to be used when
@@ -78,4 +79,4 @@ var viewModel;
                     viewModel.SetSelected(ui.newNodes[0].data);
                 }
             });
-        });
+        });});

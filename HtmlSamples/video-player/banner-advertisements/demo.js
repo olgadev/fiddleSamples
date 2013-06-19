@@ -1,3 +1,4 @@
+$(function () {
 var alternate = true;
 
         $(function () {
@@ -43,4 +44,4 @@ var alternate = true;
                 }
             });
 
-        });
+        });});

@@ -1,3 +1,4 @@
+$(function () {
 $.support.cors = true;
 
         $(function () {
@@ -14,4 +15,4 @@ $.support.cors = true;
                     measures: "[Measures].[Internet Order Count]"
                 }
             });
-        });
+        });});

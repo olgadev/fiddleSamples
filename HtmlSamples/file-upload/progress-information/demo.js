@@ -1,3 +1,4 @@
+$(function () {
 $('#igUpload1').igUpload({
             mode: 'multiple',
             progressUrl: 'http://igniteuisamples.dev.infragistics.local/13-1/IGUploadStatusHandler.ashx',
@@ -88,4 +89,4 @@ $('#igUpload1').igUpload({
                     }
                 }
             });
-        });
+        });});

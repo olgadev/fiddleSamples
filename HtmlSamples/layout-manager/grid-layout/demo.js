@@ -1,3 +1,4 @@
+$(function () {
 $(document).ready(function () {
             $('#layout').on("iglayoutmanageritemrendered", function (event, args) {
                 args.item.append("<ul><li>colspan: " + args.itemData.colSpan + "</li><li>rowspan: " + args.itemData.rowSpan + "</li></ul></span>");
@@ -57,4 +58,4 @@ $(document).ready(function () {
 					}
                 ]
             });
-        });
+        });});

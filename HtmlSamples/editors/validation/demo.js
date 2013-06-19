@@ -1,3 +1,4 @@
+$(function () {
 function getShowAllErrorsOnSubmit() {
             return $('#showErrorCheckBox').is(":checked") ? true : false;
         }
@@ -161,4 +162,4 @@ function getShowAllErrorsOnSubmit() {
             $("#submitEvent").igButton({ labelText: $("#submitEvent").val() });
 
             $('.validateOptions').attr('disabled', 'disabled');
-        });
+        });});

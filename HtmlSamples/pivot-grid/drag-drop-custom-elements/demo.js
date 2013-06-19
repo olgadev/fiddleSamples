@@ -1,3 +1,4 @@
+$(function () {
 $.support.cors = true;
 
         $(function () {
@@ -78,4 +79,4 @@ $.support.cors = true;
                     $this.fadeIn(500);
                 }
             });
-        });
+        });});
